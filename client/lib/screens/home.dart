@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
+import 'ai.dart';
+import 'settings.dart'; // Add this import at the top
 
 const kBackgroundColor = Color(0xFFF5F5F5); // Light gray
 const kCardColor = Colors.white; // Card white
@@ -38,6 +40,118 @@ class HomeScreen extends StatelessWidget {
     ],
   }) : super(key: key);
 
+  void _showAddFundsDialog(BuildContext context) {
+    String? selectedPortfolio;
+    String amount = '';
+    showDialog(
+      context: context,
+      builder: (context) {
+        return Dialog(
+          backgroundColor: kCardColor,
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+          child: Padding(
+            padding: const EdgeInsets.all(20),
+            child: StatefulBuilder(
+              builder: (context, setState) => Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  "Add Money to Portfolio"
+                      .text
+                      .xl
+                      .semiBold
+                      .color(kHeadingColor)
+                      .make(),
+                  16.heightBox,
+                  DropdownButtonFormField<String>(
+                    decoration: const InputDecoration(
+                      labelText: "Select Portfolio",
+                      border: OutlineInputBorder(),
+                    ),
+                    value: selectedPortfolio,
+                    items: activities
+                        .map((a) => DropdownMenuItem(
+                              value: a.title,
+                              child: Text(a.title),
+                            ))
+                        .toList(),
+                    onChanged: (val) => setState(() => selectedPortfolio = val),
+                  ),
+                  16.heightBox,
+                  TextField(
+                    decoration: const InputDecoration(
+                      labelText: "Amount",
+                      prefixText: "£",
+                      border: OutlineInputBorder(),
+                    ),
+                    keyboardType: TextInputType.numberWithOptions(decimal: true),
+                    onChanged: (val) => amount = val,
+                  ),
+                  24.heightBox,
+                  ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: kAccentColor,
+                      foregroundColor: Colors.white,
+                      minimumSize: const Size.fromHeight(44),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                    ),
+                    onPressed: () {
+                      // Simulate Plaid flow and funding
+                      Navigator.of(context).pop();
+                      showDialog(
+                        context: context,
+                        builder: (context) => Dialog(
+                          backgroundColor: kCardColor,
+                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+                          child: Padding(
+                            padding: const EdgeInsets.all(20),
+                            child: Column(
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                Icon(Icons.check_circle, color: kAccentColor, size: 48),
+                                16.heightBox,
+                                "Funds Added!"
+                                    .text
+                                    .xl
+                                    .semiBold
+                                    .color(kHeadingColor)
+                                    .make(),
+                                8.heightBox,
+                                Text(
+                                  "£$amount added to $selectedPortfolio.\n(Plaid flow simulated)",
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(color: kBodyTextColor),
+                                ),
+                                24.heightBox,
+                                ElevatedButton(
+                                  style: ElevatedButton.styleFrom(
+                                    backgroundColor: kAccentColor,
+                                    foregroundColor: Colors.white,
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(10),
+                                    ),
+                                  ),
+                                  onPressed: () => Navigator.of(context).pop(),
+                                  child: const Text("Close"),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      );
+                    },
+                    child: const Text("Continue"),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        );
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -73,7 +187,23 @@ class HomeScreen extends StatelessWidget {
             .make()
             .centered(),
         24.heightBox,
-        QuickActionsRow(),
+        QuickActionsRow(
+          onAddPressed: () => _showAddFundsDialog(context),
+          onAIChatPressed: () {
+            Navigator.of(context).push(
+              MaterialPageRoute(
+                builder: (context) => const AIChatScreen(),
+              ),
+            );
+          },
+          onSettingsPressed: () {
+            Navigator.of(context).push(
+              MaterialPageRoute(
+                builder: (context) => const SettingsScreen(),
+              ),
+            );
+          },
+        ),
         32.heightBox,
         "My Portfolios"
             .text
@@ -121,34 +251,48 @@ class PortfolioBalanceCard extends StatelessWidget {
 }
 
 class QuickActionsRow extends StatelessWidget {
-  const QuickActionsRow({Key? key}) : super(key: key);
+  final VoidCallback? onAddPressed;
+  final VoidCallback? onAIChatPressed;
+  final VoidCallback? onSettingsPressed;
+  const QuickActionsRow({
+    Key? key,
+    this.onAddPressed,
+    this.onAIChatPressed,
+    this.onSettingsPressed,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    // List of icons for actions
     final actions = [
-      Icons.add,
-      Icons.pie_chart,
-      Icons.settings,
+      {
+        'icon': Icons.add,
+        'onPressed': onAddPressed,
+      },
+      {
+        'icon': Icons.auto_awesome,
+        'onPressed': onAIChatPressed,
+      },
+      {
+        'icon': Icons.settings,
+        'onPressed': onSettingsPressed,
+      },
     ];
 
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: actions
           .map(
-            (icon) => Expanded(
-              child: Center(
-                child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    shape: const CircleBorder(),
-                    backgroundColor: kAccentColor,
-                    foregroundColor: Colors.white,
-                    padding: const EdgeInsets.all(18),
-                    elevation: 0,
-                  ),
-                  onPressed: () {},
-                  child: Icon(icon, size: 28),
+            (action) => Expanded(
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  shape: const CircleBorder(),
+                  backgroundColor: kAccentColor,
+                  foregroundColor: Colors.white,
+                  padding: const EdgeInsets.all(18),
+                  elevation: 0,
                 ),
+                onPressed: action['onPressed'] as VoidCallback?,
+                child: Icon(action['icon'] as IconData, size: 28),
               ),
             ),
           )
