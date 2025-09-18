@@ -1,0 +1,1 @@
+// Ensures the user has the right subscription tier before using premium features.

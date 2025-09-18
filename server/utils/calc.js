@@ -1,0 +1,1 @@
+// Only tiny formatting helpers (rounding %, decimals). Heavy calcs live in Python.

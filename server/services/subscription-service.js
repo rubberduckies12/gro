@@ -1,0 +1,1 @@
+// The “glue” for subscriptions. Validates user subscriptions, checks status, and interacts with payment APIs.

@@ -1,0 +1,1 @@
+//Small validation functions (check if input is a number, date, etc.).

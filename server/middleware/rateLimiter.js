@@ -1,0 +1,1 @@
+// Throttles requests to prevent abuse (e.g., too many API calls).

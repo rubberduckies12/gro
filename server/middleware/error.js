@@ -1,0 +1,1 @@
+// Catches errors and formats them into clean JSON responses.

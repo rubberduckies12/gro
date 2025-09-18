@@ -1,0 +1,1 @@
+// Returns recent trades/activity feed for the user.
