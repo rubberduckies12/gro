@@ -4,13 +4,24 @@
 CREATE TABLE users (
     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
     email TEXT UNIQUE NOT NULL,
-    password_hash TEXT NOT NULL,
-    first_name TEXT NOT NULL,
-    last_name TEXT NOT NULL,
+    password_hash TEXT,
+    first_name TEXT,
+    last_name TEXT,
     created_at TIMESTAMP DEFAULT NOW(),
     updated_at TIMESTAMP DEFAULT NOW(),
     kyc_status TEXT CHECK (kyc_status IN ('pending', 'approved', 'rejected')) DEFAULT 'pending',
-    aml_flag BOOLEAN DEFAULT FALSE
+    aml_flag BOOLEAN DEFAULT FALSE,
+    provider TEXT DEFAULT 'email',
+    external_id TEXT
+);
+
+CREATE TABLE oauth_identities (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    user_id UUID REFERENCES users(id) ON DELETE CASCADE,
+    provider TEXT NOT NULL,
+    external_id TEXT NOT NULL,
+    created_at TIMESTAMP DEFAULT NOW(),
+    UNIQUE(provider, external_id)
 );
 
 -- Payment & Subscription

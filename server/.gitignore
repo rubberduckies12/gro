@@ -1,1 +1,14 @@
 .env
+node_modules/
+package-lock.json
+__pycache__/
+*.pyc
+.DS_Store
+*.sqlite3
+*.log
+.idea/
+.vscode/
+# Optional: ignore test output
+coverage/
+dist/
+build/
