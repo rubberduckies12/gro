@@ -1,1 +1,0 @@
-// Verifies Apple/Google IAP receipts and checks subscription status.

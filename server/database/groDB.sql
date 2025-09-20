@@ -1,6 +1,6 @@
--- Loop (Gro) Database Schema - Portfolio-centric
-
--- Users & Auth
+-- ================================
+-- USERS & AUTHENTICATION
+-- ================================
 CREATE TABLE users (
     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
     email TEXT UNIQUE NOT NULL,
@@ -9,7 +9,7 @@ CREATE TABLE users (
     last_name TEXT,
     created_at TIMESTAMP DEFAULT NOW(),
     updated_at TIMESTAMP DEFAULT NOW(),
-    kyc_status TEXT CHECK (kyc_status IN ('pending', 'approved', 'rejected')) DEFAULT 'pending',
+    kyc_status TEXT CHECK (kyc_status IN ('pending','approved','rejected')) DEFAULT 'pending',
     aml_flag BOOLEAN DEFAULT FALSE,
     provider TEXT DEFAULT 'email',
     external_id TEXT
@@ -24,10 +24,12 @@ CREATE TABLE oauth_identities (
     UNIQUE(provider, external_id)
 );
 
--- Payment & Subscription
+-- ================================
+-- PAYMENTS & SUBSCRIPTIONS
+-- ================================
 CREATE TABLE plans (
     id SERIAL PRIMARY KEY,
-    name TEXT NOT NULL,                   -- Essential, Advanced, Pro, Lifetime
+    name TEXT NOT NULL,
     monthly_price NUMERIC(10,2) CHECK (monthly_price >= 0),
     yearly_price NUMERIC(10,2) CHECK (yearly_price >= 0),
     lifetime_price NUMERIC(10,2) CHECK (lifetime_price >= 0),
@@ -40,54 +42,15 @@ CREATE TABLE subscriptions (
     plan_id INT REFERENCES plans(id),
     start_date TIMESTAMP DEFAULT NOW(),
     end_date TIMESTAMP,
-    status TEXT CHECK (status IN ('active', 'trial', 'cancelled', 'expired')) DEFAULT 'active',
+    status TEXT CHECK (status IN ('active','trial','cancelled','expired')) DEFAULT 'active',
     is_trial BOOLEAN DEFAULT FALSE,
     apple_receipt TEXT,
     google_receipt TEXT
 );
 
--- Portfolios (user can have multiple)
-CREATE TABLE portfolios (
-    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-    user_id UUID REFERENCES users(id) ON DELETE CASCADE,
-    name TEXT NOT NULL,                  -- e.g. "Retirement", "Growth"
-    created_at TIMESTAMP DEFAULT NOW(),
-    updated_at TIMESTAMP DEFAULT NOW()
-);
-
--- Recommended Allocations (per portfolio, before user confirms)
-CREATE TABLE portfolio_allocations (
-    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-    portfolio_id UUID REFERENCES portfolios(id) ON DELETE CASCADE,
-    symbol TEXT NOT NULL,
-    weight NUMERIC CHECK (weight >= 0 AND weight <= 1),
-    confirmed BOOLEAN DEFAULT FALSE,
-    created_at TIMESTAMP DEFAULT NOW()
-);
-
--- Executed Holdings (per portfolio)
-CREATE TABLE portfolio_holdings (
-    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-    portfolio_id UUID REFERENCES portfolios(id) ON DELETE CASCADE,
-    symbol TEXT NOT NULL,
-    qty NUMERIC CHECK (qty > 0),
-    avg_price NUMERIC CHECK (avg_price > 0),
-    created_at TIMESTAMP DEFAULT NOW(),
-    updated_at TIMESTAMP DEFAULT NOW()
-);
-
--- Transaction History (per portfolio, buy/sell)
-CREATE TABLE transactions (
-    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-    portfolio_id UUID REFERENCES portfolios(id) ON DELETE CASCADE,
-    symbol TEXT NOT NULL,
-    side TEXT CHECK (side IN ('buy','sell')),
-    qty NUMERIC CHECK (qty > 0),
-    price NUMERIC CHECK (price > 0),
-    executed_at TIMESTAMP DEFAULT NOW()
-);
-
--- Market Data (global, not user-specific)
+-- ================================
+-- MARKET DATA
+-- ================================
 CREATE TABLE stock_data (
     id BIGSERIAL PRIMARY KEY,
     symbol TEXT NOT NULL,
@@ -102,7 +65,6 @@ CREATE TABLE stock_data (
     UNIQUE(symbol, date)
 );
 
--- Fundamentals
 CREATE TABLE fundamentals (
     id BIGSERIAL PRIMARY KEY,
     symbol TEXT NOT NULL,
@@ -114,7 +76,6 @@ CREATE TABLE fundamentals (
     UNIQUE(symbol)
 );
 
--- Options Data
 CREATE TABLE options_data (
     id BIGSERIAL PRIMARY KEY,
     symbol TEXT NOT NULL,
@@ -124,7 +85,6 @@ CREATE TABLE options_data (
     created_at TIMESTAMP DEFAULT NOW()
 );
 
--- Risk-free Rates
 CREATE TABLE risk_free_rates (
     id SERIAL PRIMARY KEY,
     country TEXT NOT NULL,
@@ -132,10 +92,68 @@ CREATE TABLE risk_free_rates (
     created_at TIMESTAMP DEFAULT NOW()
 );
 
--- Indexes for performance
+-- ================================
+-- GOALS & PORTFOLIOS
+-- ================================
+CREATE TABLE goals (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    portfolio_id UUID UNIQUE,
+    name TEXT NOT NULL,
+    target_amount NUMERIC CHECK (target_amount >= 0),
+    target_date DATE NOT NULL,
+    risk_tolerance TEXT CHECK (risk_tolerance IN ('low','medium','high')),
+    contribution_amount NUMERIC CHECK (contribution_amount >= 0),
+    contribution_frequency TEXT CHECK (contribution_frequency IN ('monthly','quarterly','yearly')),
+    created_at TIMESTAMP DEFAULT NOW(),
+    updated_at TIMESTAMP DEFAULT NOW()
+);
+
+CREATE TABLE portfolios (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    user_id UUID REFERENCES users(id) ON DELETE CASCADE,
+    goal_id UUID UNIQUE NOT NULL,
+    name TEXT NOT NULL,
+    amount_invested NUMERIC CHECK (amount_invested >= 0) DEFAULT 0,
+    created_at TIMESTAMP DEFAULT NOW(),
+    updated_at TIMESTAMP DEFAULT NOW(),
+    CONSTRAINT fk_goal FOREIGN KEY (goal_id) REFERENCES goals(id) ON DELETE CASCADE
+);
+
+-- Fixed stock allocations decided by AI at portfolio creation
+CREATE TABLE portfolio_allocations (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    portfolio_id UUID REFERENCES portfolios(id) ON DELETE CASCADE,
+    symbol TEXT NOT NULL,
+    target_weight NUMERIC CHECK (target_weight >= 0 AND target_weight <= 1),
+    created_at TIMESTAMP DEFAULT NOW()
+);
+
+-- Current executed stock holdings (auto-updated as deposits flow in)
+CREATE TABLE portfolio_holdings (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    portfolio_id UUID REFERENCES portfolios(id) ON DELETE CASCADE,
+    symbol TEXT NOT NULL,
+    qty NUMERIC CHECK (qty >= 0),                -- shares held
+    avg_price NUMERIC CHECK (avg_price >= 0),    -- average purchase price
+    created_at TIMESTAMP DEFAULT NOW(),
+    updated_at TIMESTAMP DEFAULT NOW()
+);
+
+-- Portfolio-level transactions (user deposits/withdrawals only)
+CREATE TABLE portfolio_transactions (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    portfolio_id UUID REFERENCES portfolios(id) ON DELETE CASCADE,
+    type TEXT CHECK (type IN ('deposit','withdraw')),
+    amount NUMERIC CHECK (amount > 0),           -- contribution/withdrawal amount
+    executed_at TIMESTAMP DEFAULT NOW()
+);
+
+-- ================================
+-- INDEXES
+-- ================================
 CREATE INDEX idx_stock_data_symbol_date ON stock_data(symbol, date);
 CREATE INDEX idx_fundamentals_symbol ON fundamentals(symbol);
 CREATE INDEX idx_options_data_symbol_expiry ON options_data(symbol, expiry);
 CREATE INDEX idx_portfolio_allocations_portfolio_id ON portfolio_allocations(portfolio_id);
 CREATE INDEX idx_portfolio_holdings_portfolio_id ON portfolio_holdings(portfolio_id);
-CREATE INDEX idx_transactions_portfolio_id ON transactions(portfolio_id);
+CREATE INDEX idx_portfolio_transactions_portfolio_id ON portfolio_transactions(portfolio_id);
