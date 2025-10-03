@@ -156,7 +156,7 @@ const Home = () => {
                 className="inline-flex items-center rounded-2xl bg-emerald-500 px-6 sm:px-8 lg:px-10 py-3 sm:py-4 lg:py-5 text-sm sm:text-base lg:text-lg font-semibold text-white shadow-2xl mb-3 sm:mb-4"
               >
                 <SparklesIcon className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 mr-2 sm:mr-3" />
-                <span>We're still Gro-ing - launching soon!</span>
+                <span>We&apos;re still Gro-ing - launching soon!</span>
               </motion.div>
               <p className="text-gray-600 text-sm sm:text-base lg:text-lg text-center">
                 What If Money Did Gro On Trees?
@@ -394,7 +394,7 @@ const Home = () => {
           >
             <div className="inline-flex items-center rounded-2xl bg-white text-emerald-500 px-6 sm:px-8 lg:px-10 py-3 sm:py-4 lg:py-5 text-base sm:text-lg lg:text-xl font-bold shadow-2xl">
               <SparklesIcon className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 mr-2 sm:mr-3" />
-              <span>We're still Gro-ing - launching soon!</span>
+              <span>We&apos;re still Gro-ing - launching soon!</span>
             </div>
           </motion.div>
         </div>
