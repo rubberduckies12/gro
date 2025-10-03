@@ -24,66 +24,69 @@ const Home = () => {
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
-  // Optimized animation variants for mobile
+  // Disable all animations on mobile
+  const noAnimation = shouldReduceMotion || isMobile;
+
+  // Animation variants - disabled on mobile
   const fadeInUp: Variants = {
-    hidden: { opacity: 0, y: shouldReduceMotion ? 0 : (isMobile ? 15 : 30) },
+    hidden: { opacity: noAnimation ? 1 : 0, y: noAnimation ? 0 : 30 },
     visible: { 
       opacity: 1, 
       y: 0,
       transition: { 
-        duration: shouldReduceMotion ? 0 : (isMobile ? 0.2 : 0.4), 
+        duration: noAnimation ? 0 : 0.4, 
         ease: [0.4, 0, 0.2, 1] 
       }
     }
   };
 
   const fadeInLeft: Variants = {
-    hidden: { opacity: 0, x: shouldReduceMotion ? 0 : (isMobile ? -15 : -30) },
+    hidden: { opacity: noAnimation ? 1 : 0, x: noAnimation ? 0 : -30 },
     visible: { 
       opacity: 1, 
       x: 0,
       transition: { 
-        duration: shouldReduceMotion ? 0 : (isMobile ? 0.2 : 0.4), 
+        duration: noAnimation ? 0 : 0.4, 
         ease: [0.4, 0, 0.2, 1] 
       }
     }
   };
 
   const fadeInRight: Variants = {
-    hidden: { opacity: 0, x: shouldReduceMotion ? 0 : (isMobile ? 15 : 30) },
+    hidden: { opacity: noAnimation ? 1 : 0, x: noAnimation ? 0 : 30 },
     visible: { 
       opacity: 1, 
       x: 0,
       transition: { 
-        duration: shouldReduceMotion ? 0 : (isMobile ? 0.2 : 0.4), 
+        duration: noAnimation ? 0 : 0.4, 
         ease: [0.4, 0, 0.2, 1] 
       }
     }
   };
 
   const staggerContainer: Variants = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 1 },
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: shouldReduceMotion ? 0 : (isMobile ? 0.05 : 0.1),
-        delayChildren: shouldReduceMotion ? 0 : (isMobile ? 0.05 : 0.1)
+        staggerChildren: noAnimation ? 0 : 0.1,
+        delayChildren: noAnimation ? 0 : 0.1
       }
     }
   };
 
   const snapIn: Variants = {
-    hidden: { opacity: 0, scale: shouldReduceMotion ? 1 : (isMobile ? 0.95 : 0.8), y: shouldReduceMotion ? 0 : (isMobile ? 10 : 20) },
+    hidden: { opacity: noAnimation ? 1 : 0, scale: noAnimation ? 1 : 0.8, y: noAnimation ? 0 : 20 },
     visible: { 
       opacity: 1, 
       scale: 1,
       y: 0,
-      transition: shouldReduceMotion ? { duration: 0 } : { 
-        duration: isMobile ? 0.25 : 0.35, 
+      transition: noAnimation ? { duration: 0 } : { 
+        duration: 0.35, 
         ease: [0.34, 1.56, 0.64, 1],
         type: "spring",
-        damping: isMobile ? 25 : 20,
-        stiffness: isMobile ? 400 : 300
+        damping: 20,
+        stiffness: 300
       }
     }
   };
@@ -105,21 +108,21 @@ const Home = () => {
     <div className="min-h-screen bg-emerald-50">
       {/* Hero Section */}
       <section className="relative px-4 sm:px-6 pt-8 sm:pt-12 lg:pt-16 pb-16 sm:pb-24 lg:pb-32 lg:px-8 overflow-hidden">
-        {/* Background decorations - Simplified for mobile */}
+        {/* Background decorations - Disabled on mobile */}
         <div className="absolute inset-0 overflow-hidden">
           <motion.div 
-            animate={shouldReduceMotion ? {} : { rotate: 360 }}
-            transition={shouldReduceMotion ? {} : { 
-              duration: isMobile ? 30 : 20, 
+            animate={noAnimation ? {} : { rotate: 360 }}
+            transition={noAnimation ? {} : { 
+              duration: 20, 
               repeat: Infinity, 
               ease: "linear" 
             }}
             className="absolute top-1/4 left-1/4 w-32 sm:w-48 lg:w-64 h-32 sm:h-48 lg:h-64 bg-emerald-200/30 rounded-full blur-3xl"
           />
           <motion.div 
-            animate={shouldReduceMotion ? {} : { rotate: -360 }}
-            transition={shouldReduceMotion ? {} : { 
-              duration: isMobile ? 40 : 25, 
+            animate={noAnimation ? {} : { rotate: -360 }}
+            transition={noAnimation ? {} : { 
+              duration: 25, 
               repeat: Infinity, 
               ease: "linear" 
             }}
@@ -154,7 +157,7 @@ const Home = () => {
             >
               Your money,
               <br />
-              <span className={`text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-emerald-600 ${!shouldReduceMotion && !isMobile ? 'animate-pulse' : ''}`}>
+              <span className={`text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-emerald-600 ${!noAnimation ? 'animate-pulse' : ''}`}>
                 growing smarter
               </span>
             </motion.h1>
@@ -181,8 +184,8 @@ const Home = () => {
               className="flex flex-col items-center justify-center mb-12 sm:mb-16 px-2"
             >
               <motion.div
-                animate={shouldReduceMotion ? {} : { scale: [1, 1.05, 1] }}
-                transition={shouldReduceMotion ? {} : { duration: 2, repeat: Infinity }}
+                animate={noAnimation ? {} : { scale: [1, 1.05, 1] }}
+                transition={noAnimation ? {} : { duration: 2, repeat: Infinity }}
                 className="inline-flex items-center rounded-2xl bg-emerald-500 px-6 sm:px-8 lg:px-10 py-3 sm:py-4 lg:py-5 text-sm sm:text-base lg:text-lg font-semibold text-white shadow-2xl mb-3 sm:mb-4"
               >
                 <SparklesIcon className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 mr-2 sm:mr-3" />
@@ -202,7 +205,7 @@ const Home = () => {
           <motion.div 
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: isMobile ? 0.1 : 0.3 }}
+            viewport={{ once: true, amount: 0.3 }}
             variants={fadeInUp}
             className="text-center mb-12 sm:mb-16 lg:mb-20"
           >
@@ -218,18 +221,18 @@ const Home = () => {
           <motion.div 
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: isMobile ? 0.1 : 0.2 }}
+            viewport={{ once: true, amount: 0.2 }}
             variants={staggerContainer}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"
           >
             <motion.div 
               variants={snapIn}
-              whileHover={isMobile ? {} : { y: -12, scale: 1.03 }}
+              whileHover={noAnimation ? {} : { y: -12, scale: 1.03 }}
               transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1] }}
               className="group relative bg-white rounded-3xl p-6 sm:p-8 shadow-xl hover:shadow-2xl border border-emerald-100/50 text-center md:col-span-2 lg:col-span-1"
             >
               <motion.div 
-                whileHover={isMobile ? {} : { rotate: 15, scale: 1.1 }}
+                whileHover={noAnimation ? {} : { rotate: 15, scale: 1.1 }}
                 transition={{ duration: 0.3 }}
                 className="mx-auto flex h-16 w-16 sm:h-20 sm:w-20 items-center justify-center rounded-2xl bg-emerald-500 mb-4 sm:mb-6 shadow-lg group-hover:shadow-emerald-500/50"
               >
@@ -246,12 +249,12 @@ const Home = () => {
             
             <motion.div 
               variants={snapIn}
-              whileHover={isMobile ? {} : { y: -12, scale: 1.03 }}
+              whileHover={noAnimation ? {} : { y: -12, scale: 1.03 }}
               transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1] }}
               className="group relative bg-white rounded-3xl p-6 sm:p-8 shadow-xl hover:shadow-2xl border border-emerald-100/50 text-center"
             >
               <motion.div 
-                whileHover={isMobile ? {} : { rotate: 15, scale: 1.1 }}
+                whileHover={noAnimation ? {} : { rotate: 15, scale: 1.1 }}
                 transition={{ duration: 0.3 }}
                 className="mx-auto flex h-16 w-16 sm:h-20 sm:w-20 items-center justify-center rounded-2xl bg-emerald-500 mb-4 sm:mb-6 shadow-lg group-hover:shadow-emerald-500/50"
               >
@@ -268,12 +271,12 @@ const Home = () => {
             
             <motion.div 
               variants={snapIn}
-              whileHover={isMobile ? {} : { y: -12, scale: 1.03 }}
+              whileHover={noAnimation ? {} : { y: -12, scale: 1.03 }}
               transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1] }}
               className="group relative bg-white rounded-3xl p-6 sm:p-8 shadow-xl hover:shadow-2xl border border-emerald-100/50 text-center"
             >
               <motion.div 
-                whileHover={isMobile ? {} : { rotate: 15, scale: 1.1 }}
+                whileHover={noAnimation ? {} : { rotate: 15, scale: 1.1 }}
                 transition={{ duration: 0.3 }}
                 className="mx-auto flex h-16 w-16 sm:h-20 sm:w-20 items-center justify-center rounded-2xl bg-emerald-500 mb-4 sm:mb-6 shadow-lg group-hover:shadow-emerald-500/50"
               >
@@ -296,7 +299,7 @@ const Home = () => {
           <motion.div 
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: isMobile ? 0.1 : 0.3 }}
+            viewport={{ once: true, amount: 0.3 }}
             variants={fadeInUp}
             className="text-center mb-12 sm:mb-16 lg:mb-20"
           >
@@ -313,15 +316,15 @@ const Home = () => {
             <motion.div 
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true, amount: isMobile ? 0.1 : 0.3 }}
+              viewport={{ once: true, amount: 0.3 }}
               variants={fadeInLeft}
-              whileHover={isMobile ? {} : { scale: 1.05, y: -8 }}
+              whileHover={noAnimation ? {} : { scale: 1.05, y: -8 }}
               transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1] }}
               className="relative bg-white rounded-3xl p-6 sm:p-8 lg:p-10 shadow-xl border border-gray-100 group text-center md:col-span-2 lg:col-span-1"
             >
               <motion.div 
-                whileHover={isMobile ? {} : { scale: 1.2, rotate: 10 }}
-                whileTap={isMobile ? {} : { scale: 0.9 }}
+                whileHover={noAnimation ? {} : { scale: 1.2, rotate: 10 }}
+                whileTap={noAnimation ? {} : { scale: 0.9 }}
                 transition={{ duration: 0.2 }}
                 className="flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-2xl bg-emerald-500 text-white font-bold text-lg sm:text-xl lg:text-2xl mb-6 sm:mb-8 shadow-lg group-hover:shadow-emerald-500/50 mx-auto"
               >
@@ -337,15 +340,15 @@ const Home = () => {
             <motion.div 
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true, amount: isMobile ? 0.1 : 0.3 }}
+              viewport={{ once: true, amount: 0.3 }}
               variants={fadeInUp}
-              whileHover={isMobile ? {} : { scale: 1.05, y: -8 }}
-              transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1], delay: shouldReduceMotion ? 0 : 0.1 }}
+              whileHover={noAnimation ? {} : { scale: 1.05, y: -8 }}
+              transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1], delay: noAnimation ? 0 : 0.1 }}
               className="relative bg-white rounded-3xl p-6 sm:p-8 lg:p-10 shadow-xl border border-gray-100 group text-center"
             >
               <motion.div 
-                whileHover={isMobile ? {} : { scale: 1.2, rotate: 10 }}
-                whileTap={isMobile ? {} : { scale: 0.9 }}
+                whileHover={noAnimation ? {} : { scale: 1.2, rotate: 10 }}
+                whileTap={noAnimation ? {} : { scale: 0.9 }}
                 transition={{ duration: 0.2 }}
                 className="flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-2xl bg-emerald-500 text-white font-bold text-lg sm:text-xl lg:text-2xl mb-6 sm:mb-8 shadow-lg group-hover:shadow-emerald-500/50 mx-auto"
               >
@@ -361,15 +364,15 @@ const Home = () => {
             <motion.div 
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true, amount: isMobile ? 0.1 : 0.3 }}
+              viewport={{ once: true, amount: 0.3 }}
               variants={fadeInRight}
-              whileHover={isMobile ? {} : { scale: 1.05, y: -8 }}
-              transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1], delay: shouldReduceMotion ? 0 : 0.2 }}
+              whileHover={noAnimation ? {} : { scale: 1.05, y: -8 }}
+              transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1], delay: noAnimation ? 0 : 0.2 }}
               className="relative bg-white rounded-3xl p-6 sm:p-8 lg:p-10 shadow-xl border border-gray-100 group text-center md:col-span-2 lg:col-span-1"
             >
               <motion.div 
-                whileHover={isMobile ? {} : { scale: 1.2, rotate: 10 }}
-                whileTap={isMobile ? {} : { scale: 0.9 }}
+                whileHover={noAnimation ? {} : { scale: 1.2, rotate: 10 }}
+                whileTap={noAnimation ? {} : { scale: 0.9 }}
                 transition={{ duration: 0.2 }}
                 className="flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-2xl bg-emerald-500 text-white font-bold text-lg sm:text-xl lg:text-2xl mb-6 sm:mb-8 shadow-lg group-hover:shadow-emerald-500/50 mx-auto"
               >
@@ -389,17 +392,17 @@ const Home = () => {
       <motion.section 
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: isMobile ? 0.1 : 0.3 }}
+        viewport={{ once: true, amount: 0.3 }}
         variants={fadeInUp}
         className="py-16 sm:py-24 lg:py-32 bg-emerald-500 relative overflow-hidden"
       >
-        {/* Background animation - Simplified for mobile */}
+        {/* Background animation - Disabled on mobile */}
         <motion.div 
-          animate={shouldReduceMotion || isMobile ? {} : { 
+          animate={noAnimation ? {} : { 
             scale: [1, 1.2, 1],
             opacity: [0.3, 0.1, 0.3]
           }}
-          transition={shouldReduceMotion || isMobile ? {} : { duration: 8, repeat: Infinity }}
+          transition={noAnimation ? {} : { duration: 8, repeat: Infinity }}
           className="absolute inset-0 bg-gradient-to-r from-white/10 to-transparent"
         />
         
