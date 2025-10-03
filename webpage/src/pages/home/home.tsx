@@ -4,6 +4,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowRightIcon, ShieldCheckIcon, ChartBarIcon, ArrowTrendingUpIcon, SparklesIcon, RocketLaunchIcon, HomeIcon, EyeIcon, BoltIcon, CpuChipIcon, StarIcon } from '@heroicons/react/24/solid';
 import { motion, Variants, useReducedMotion } from 'framer-motion';
+import Header from '../../components/header';
+import Footer from '../../components/footer';
 
 const Home = () => {
   const [isClient, setIsClient] = useState(false);
@@ -106,8 +108,10 @@ const Home = () => {
 
   return (
     <div className="min-h-screen bg-emerald-50">
+      <Header />
+      
       {/* Hero Section */}
-      <section className="relative px-4 sm:px-6 pt-8 sm:pt-12 lg:pt-16 pb-16 sm:pb-24 lg:pb-32 lg:px-8 overflow-hidden">
+      <section className="relative px-4 sm:px-6 pt-16 sm:pt-20 lg:pt-24 pb-16 sm:pb-24 lg:pb-32 lg:px-8 overflow-hidden">
         {/* Background decorations - Disabled on mobile */}
         <div className="absolute inset-0 overflow-hidden">
           <motion.div 
@@ -139,7 +143,7 @@ const Home = () => {
           >
             <motion.div 
               variants={snapIn}
-              className="flex items-center justify-center mb-4 sm:mb-6 lg:mb-8"
+              className="flex items-center justify-center -mb-4 sm:-mb-4 lg:-mb-16"
             >
               <Image 
                 src="/logo.png" 
@@ -433,49 +437,7 @@ const Home = () => {
         </div>
       </motion.section>
 
-      {/* Footer */}
-      <footer className="bg-gray-900">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12">
-            <div className="sm:col-span-2">
-              <div className="flex items-center space-x-3 sm:space-x-4 mb-4 sm:mb-6">
-                <div className="w-12 h-12 sm:w-14 sm:h-14 bg-emerald-500 rounded-2xl flex items-center justify-center shadow-lg">
-                  <span className="text-white font-bold text-xl sm:text-2xl">G</span>
-                </div>
-                <span className="text-2xl sm:text-3xl font-bold text-white">Gro</span>
-              </div>
-              <p className="text-gray-400 max-w-md text-base sm:text-lg leading-relaxed">
-                Goals • Returns • Outcomes. The investing app that actually gets you. 
-                Building wealth for the next generation, one goal at a time.
-              </p>
-            </div>
-            
-            <div>
-              <h3 className="text-base sm:text-lg font-bold text-white mb-4 sm:mb-6">Platform</h3>
-              <ul className="space-y-3 sm:space-y-4">
-                <li><Link href="/portfolios" className="text-gray-400 hover:text-emerald-400 transition-colors duration-150 text-sm sm:text-base lg:text-lg">Portfolios</Link></li>
-                <li><Link href="/goals" className="text-gray-400 hover:text-emerald-400 transition-colors duration-150 text-sm sm:text-base lg:text-lg">Goals</Link></li>
-                <li><Link href="/analytics" className="text-gray-400 hover:text-emerald-400 transition-colors duration-150 text-sm sm:text-base lg:text-lg">Analytics</Link></li>
-              </ul>
-            </div>
-            
-            <div>
-              <h3 className="text-base sm:text-lg font-bold text-white mb-4 sm:mb-6">Company</h3>
-              <ul className="space-y-3 sm:space-y-4">
-                <li><Link href="/about" className="text-gray-400 hover:text-emerald-400 transition-colors duration-150 text-sm sm:text-base lg:text-lg">About</Link></li>
-                <li><Link href="/security" className="text-gray-400 hover:text-emerald-400 transition-colors duration-150 text-sm sm:text-base lg:text-lg">Security</Link></li>
-                <li><Link href="/careers" className="text-gray-400 hover:text-emerald-400 transition-colors duration-150 text-sm sm:text-base lg:text-lg">Careers</Link></li>
-              </ul>
-            </div>
-          </div>
-          
-          <div className="border-t border-gray-800 mt-12 sm:mt-16 pt-6 sm:pt-8">
-            <p className="text-center text-gray-400 text-sm sm:text-base lg:text-lg">
-              &copy; 2025 Gro Equity Ltd. All rights reserved. Made with love for the future.
-            </p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };
