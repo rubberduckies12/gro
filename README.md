@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🌱 Gro — Goal-Driven Investing Platform
+# 🌱 Gro — Goals, Returns, Outcomes
 
 ---
 
