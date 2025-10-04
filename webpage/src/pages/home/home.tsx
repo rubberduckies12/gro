@@ -1,8 +1,7 @@
 'use client';
 import React, { useEffect, useState } from 'react';
-import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowRightIcon, ShieldCheckIcon, ChartBarIcon, ArrowTrendingUpIcon, SparklesIcon, RocketLaunchIcon, HomeIcon, EyeIcon, BoltIcon, CpuChipIcon, StarIcon } from '@heroicons/react/24/solid';
+import { ShieldCheckIcon, ChartBarIcon, ArrowTrendingUpIcon, SparklesIcon } from '@heroicons/react/24/solid';
 import { motion, Variants, useReducedMotion } from 'framer-motion';
 import Header from '../../components/header';
 import Footer from '../../components/footer';
@@ -218,7 +217,7 @@ const Home = () => {
         Investing that actually makes sense
       </h3>
       <p className="text-base sm:text-lg lg:text-xl text-gray-700 max-w-3xl mx-auto px-2">
-        Gro's AI builds personalized portfolios for your actual goals while you focus on everything else. Progress on autopilot.
+        Gro&apos;s AI builds personalized portfolios for your actual goals while you focus on everything else. Progress on autopilot.
       </p>
     </motion.div>
     
