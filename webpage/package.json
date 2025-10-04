@@ -10,10 +10,13 @@
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
+    "@rive-app/react-canvas": "^4.23.4",
     "framer-motion": "^12.23.22",
+    "lottie-react": "^2.4.1",
     "next": "^15.5.4",
     "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react-dom": "^19.1.0",
+    "reactflow": "^11.11.4"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

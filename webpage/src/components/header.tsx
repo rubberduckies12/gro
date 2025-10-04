@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 import { Bars3Icon, XMarkIcon, ChevronDownIcon } from '@heroicons/react/24/outline';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -10,6 +11,7 @@ const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const [isPoliciesOpen, setIsPoliciesOpen] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     // Handle scroll effect
@@ -53,6 +55,20 @@ const Header = () => {
     { name: 'AI & Data', href: '/policies/ai-data' },
   ];
 
+  // Helper function to check if link is active
+  const isActivePage = (href: string) => {
+    if (href === '/') {
+      return pathname === '/';
+    }
+    return pathname.startsWith(href);
+  };
+
+  // Helper function to get nav link classes
+  const getNavLinkClasses = (href: string, baseClasses: string) => {
+    const isActive = isActivePage(href);
+    return `${baseClasses} ${isActive ? 'text-emerald-600' : 'text-gray-700 hover:text-emerald-600'}`;
+  };
+
   return (
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -89,31 +105,39 @@ const Header = () => {
           <div className="hidden md:flex md:items-center md:space-x-8">
             <Link 
               href="/" 
-              className="text-gray-700 hover:text-emerald-600 font-medium transition-colors duration-200 relative group"
+              className={getNavLinkClasses('/', 'font-medium transition-colors duration-200 relative group')}
             >
               Home
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-emerald-500 transition-all duration-300 group-hover:w-full"></span>
+              <span className={`absolute -bottom-1 left-0 h-0.5 bg-emerald-500 transition-all duration-300 ${
+                isActivePage('/') ? 'w-full' : 'w-0 group-hover:w-full'
+              }`}></span>
             </Link>
             <Link 
               href="/product" 
-              className="text-gray-700 hover:text-emerald-600 font-medium transition-colors duration-200 relative group"
+              className={getNavLinkClasses('/product', 'font-medium transition-colors duration-200 relative group')}
             >
               Product
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-emerald-500 transition-all duration-300 group-hover:w-full"></span>
+              <span className={`absolute -bottom-1 left-0 h-0.5 bg-emerald-500 transition-all duration-300 ${
+                isActivePage('/product') ? 'w-full' : 'w-0 group-hover:w-full'
+              }`}></span>
             </Link>
             <Link 
               href="/about" 
-              className="text-gray-700 hover:text-emerald-600 font-medium transition-colors duration-200 relative group"
+              className={getNavLinkClasses('/about', 'font-medium transition-colors duration-200 relative group')}
             >
               About
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-emerald-500 transition-all duration-300 group-hover:w-full"></span>
+              <span className={`absolute -bottom-1 left-0 h-0.5 bg-emerald-500 transition-all duration-300 ${
+                isActivePage('/about') ? 'w-full' : 'w-0 group-hover:w-full'
+              }`}></span>
             </Link>
             
             {/* Policies Dropdown */}
             <div className="relative">
               <button
                 onClick={togglePolicies}
-                className="flex items-center space-x-1 text-gray-700 hover:text-emerald-600 font-medium transition-colors duration-200 relative group"
+                className={`flex items-center space-x-1 font-medium transition-colors duration-200 relative group ${
+                  pathname.startsWith('/policies') ? 'text-emerald-600' : 'text-gray-700 hover:text-emerald-600'
+                }`}
               >
                 <span>Policies</span>
                 <motion.div
@@ -122,7 +146,9 @@ const Header = () => {
                 >
                   <ChevronDownIcon className="h-4 w-4" />
                 </motion.div>
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-emerald-500 transition-all duration-300 group-hover:w-full"></span>
+                <span className={`absolute -bottom-1 left-0 h-0.5 bg-emerald-500 transition-all duration-300 ${
+                  pathname.startsWith('/policies') ? 'w-full' : 'w-0 group-hover:w-full'
+                }`}></span>
               </button>
 
               {/* Desktop Dropdown Menu */}
@@ -140,7 +166,11 @@ const Header = () => {
                         key={item.href}
                         href={item.href}
                         onClick={() => setIsPoliciesOpen(false)}
-                        className="block px-4 py-2 text-sm text-gray-700 hover:text-emerald-600 hover:bg-emerald-50/50 transition-colors duration-200"
+                        className={`block px-4 py-2 text-sm transition-colors duration-200 ${
+                          pathname === item.href 
+                            ? 'text-emerald-600 bg-emerald-50/50' 
+                            : 'text-gray-700 hover:text-emerald-600 hover:bg-emerald-50/50'
+                        }`}
                       >
                         {item.name}
                       </Link>
@@ -226,21 +256,27 @@ const Header = () => {
                   <Link 
                     href="/" 
                     onClick={closeMenu}
-                    className="text-lg font-medium text-gray-700 hover:text-emerald-600 transition-colors duration-200 py-2"
+                    className={`text-lg font-medium transition-colors duration-200 py-2 ${
+                      isActivePage('/') ? 'text-emerald-600' : 'text-gray-700 hover:text-emerald-600'
+                    }`}
                   >
                     Home
                   </Link>
                   <Link 
                     href="/product" 
                     onClick={closeMenu}
-                    className="text-lg font-medium text-gray-700 hover:text-emerald-600 transition-colors duration-200 py-2"
+                    className={`text-lg font-medium transition-colors duration-200 py-2 ${
+                      isActivePage('/product') ? 'text-emerald-600' : 'text-gray-700 hover:text-emerald-600'
+                    }`}
                   >
                     Product
                   </Link>
                   <Link 
                     href="/about" 
                     onClick={closeMenu}
-                    className="text-lg font-medium text-gray-700 hover:text-emerald-600 transition-colors duration-200 py-2"
+                    className={`text-lg font-medium transition-colors duration-200 py-2 ${
+                      isActivePage('/about') ? 'text-emerald-600' : 'text-gray-700 hover:text-emerald-600'
+                    }`}
                   >
                     About
                   </Link>
@@ -249,7 +285,9 @@ const Header = () => {
                   <div>
                     <button
                       onClick={togglePolicies}
-                      className="flex items-center justify-between w-full text-lg font-medium text-gray-700 hover:text-emerald-600 transition-colors duration-200 py-2"
+                      className={`flex items-center justify-between w-full text-lg font-medium transition-colors duration-200 py-2 ${
+                        pathname.startsWith('/policies') ? 'text-emerald-600' : 'text-gray-700 hover:text-emerald-600'
+                      }`}
                     >
                       <span>Policies</span>
                       <motion.div
@@ -275,7 +313,11 @@ const Header = () => {
                               key={item.href}
                               href={item.href}
                               onClick={closeMenu}
-                              className="block text-base text-gray-600 hover:text-emerald-600 transition-colors duration-200 py-1"
+                              className={`block text-base transition-colors duration-200 py-1 ${
+                                pathname === item.href 
+                                  ? 'text-emerald-600' 
+                                  : 'text-gray-600 hover:text-emerald-600'
+                              }`}
                             >
                               {item.name}
                             </Link>

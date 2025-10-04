@@ -1,8 +1,11 @@
 'use client';
 import React from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 const Footer = () => {
+  const pathname = usePathname();
+
   const policyItems = [
     { name: 'Terms & Conditions', href: '/policies/terms' },
     { name: 'Privacy Policy', href: '/policies/privacy' },
@@ -10,6 +13,31 @@ const Footer = () => {
     { name: 'Financial Conduct', href: '/policies/financial-conduct' },
     { name: 'AI & Data', href: '/policies/ai-data' },
   ];
+
+  const navigationItems = [
+    { name: 'Home', href: '/' },
+    { name: 'Product', href: '/product' },
+    { name: 'About', href: '/about' },
+    { name: 'Join Waitlist', href: '/waitlist' },
+  ];
+
+  // Helper function to check if link is active
+  const isActivePage = (href: string) => {
+    if (href === '/') {
+      return pathname === '/';
+    }
+    return pathname.startsWith(href);
+  };
+
+  // Helper function to get nav link classes
+  const getNavLinkClasses = (href: string) => {
+    const isActive = isActivePage(href);
+    return `transition-colors duration-150 text-sm sm:text-base lg:text-lg ${
+      isActive 
+        ? 'text-emerald-400 font-medium' 
+        : 'text-gray-400 hover:text-emerald-400'
+    }`;
+  };
 
   return (
     <footer className="bg-gray-900">
@@ -28,38 +56,16 @@ const Footer = () => {
           <div>
             <h3 className="text-base sm:text-lg font-bold text-white mb-4 sm:mb-6">Navigation</h3>
             <ul className="space-y-3 sm:space-y-4">
-              <li>
-                <Link 
-                  href="/" 
-                  className="text-gray-400 hover:text-emerald-400 transition-colors duration-150 text-sm sm:text-base lg:text-lg"
-                >
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  href="/product" 
-                  className="text-gray-400 hover:text-emerald-400 transition-colors duration-150 text-sm sm:text-base lg:text-lg"
-                >
-                  Product
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  href="/about" 
-                  className="text-gray-400 hover:text-emerald-400 transition-colors duration-150 text-sm sm:text-base lg:text-lg"
-                >
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  href="/waitlist" 
-                  className="text-gray-400 hover:text-emerald-400 transition-colors duration-150 text-sm sm:text-base lg:text-lg"
-                >
-                  Join Waitlist
-                </Link>
-              </li>
+              {navigationItems.map((item) => (
+                <li key={item.href}>
+                  <Link 
+                    href={item.href} 
+                    className={getNavLinkClasses(item.href)}
+                  >
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
           
@@ -70,7 +76,11 @@ const Footer = () => {
                 <li key={item.href}>
                   <Link 
                     href={item.href} 
-                    className="text-gray-400 hover:text-emerald-400 transition-colors duration-150 text-sm sm:text-base lg:text-lg"
+                    className={`transition-colors duration-150 text-sm sm:text-base lg:text-lg ${
+                      pathname === item.href 
+                        ? 'text-emerald-400 font-medium' 
+                        : 'text-gray-400 hover:text-emerald-400'
+                    }`}
                   >
                     {item.name}
                   </Link>
