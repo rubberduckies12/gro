@@ -791,7 +791,7 @@ const Product = () => {
               <div className="bg-emerald-500 rounded-3xl p-6 sm:p-8 text-white shadow-xl">
                 <h5 className="text-lg sm:text-xl font-bold mb-4">Ready to level up?</h5>
                 <p className="leading-relaxed text-base sm:text-lg">
-                  Join thousands of goal-setters who&apos;ve turned investing into their favorite daily habit. Your future self will thank you.
+                  Join a community of goal-focused investors building their financial future through consistent, strategic investing.
                 </p>
               </div>
             </div>
