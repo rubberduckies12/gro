@@ -111,7 +111,7 @@ const Home = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative px-4 sm:px-6 pt-16 sm:pt-20 lg:pt-24 pb-16 sm:pb-24 lg:pb-32 lg:px-8 overflow-hidden">
+      <section className="relative px-4 sm:px-6 pt-6 sm:pt-8 lg:pt-12 pb-12 sm:pb-16 lg:pb-20 lg:px-8 overflow-hidden">
         {/* Background decorations - Disabled on mobile */}
         <div className="absolute inset-0 overflow-hidden">
           <motion.div 
@@ -143,21 +143,21 @@ const Home = () => {
           >
             <motion.div 
               variants={snapIn}
-              className="flex items-center justify-center -mb-4 sm:-mb-4 lg:-mb-16"
+              className="flex items-center justify-center -mb-2 sm:-mb-2 lg:-mb-16"
             >
               <Image 
                 src="/logo.png" 
                 alt="Gro Logo" 
                 width={480} 
                 height={480}
-                className="h-32 sm:h-48 md:h-60 lg:h-80 w-auto"
+                className="h-28 sm:h-36 md:h-44 lg:h-56 w-auto"
                 priority
               />
             </motion.div>
             
             <motion.h1 
               variants={fadeInUp}
-              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-extrabold tracking-tight text-black mb-6 sm:mb-8 leading-tight"
+              className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-extrabold tracking-tight text-black mb-5 sm:mb-7 leading-tight"
             >
               Your money,
               <br />
@@ -168,7 +168,7 @@ const Home = () => {
             
             <motion.div
               variants={fadeInUp}
-              className="text-lg sm:text-xl lg:text-2xl text-gray-800 mb-4 sm:mb-6 max-w-4xl mx-auto leading-relaxed font-medium px-2"
+              className="text-lg sm:text-xl lg:text-2xl text-gray-800 mb-4 sm:mb-5 max-w-4xl mx-auto leading-relaxed font-medium px-2"
             >
               <span className="text-emerald-600 font-bold">Goals</span> • 
               <span className="text-emerald-600 font-bold mx-2">Returns</span>• 
@@ -177,20 +177,20 @@ const Home = () => {
 
             <motion.p 
               variants={fadeInUp}
-              className="text-base sm:text-lg lg:text-xl text-gray-700 mb-8 sm:mb-12 max-w-3xl mx-auto leading-relaxed px-2"
+              className="text-base sm:text-lg lg:text-xl text-gray-700 mb-7 sm:mb-9 max-w-3xl mx-auto leading-relaxed px-2"
             >
-              Time is money. Gro is about maximising results while minimising time and effort. In three steps—set your goals, watch your returns, and achieve your outcomes—you get more progress in less time. Success before you finish your morning coffee.
+              Three steps. Zero complexity. Set your goal, watch AI build your path, achieve your outcome. Financial progress that fits between breakfast and your commute.
             </motion.p>
             
             {/* Coming Soon Message */}
             <motion.div 
               variants={fadeInUp}
-              className="flex flex-col items-center justify-center mb-12 sm:mb-16 px-2"
+              className="flex flex-col items-center justify-center mb-8 sm:mb-10 px-2"
             >
               <motion.div
                 animate={noAnimation ? {} : { scale: [1, 1.05, 1] }}
                 transition={noAnimation ? {} : { duration: 2, repeat: Infinity }}
-                className="inline-flex items-center rounded-2xl bg-emerald-500 px-6 sm:px-8 lg:px-10 py-3 sm:py-4 lg:py-5 text-sm sm:text-base lg:text-lg font-semibold text-white shadow-2xl mb-3 sm:mb-4"
+                className="inline-flex items-center rounded-2xl bg-emerald-500 px-5 sm:px-7 lg:px-9 py-3 sm:py-4 lg:py-5 text-sm sm:text-base lg:text-lg font-semibold text-white shadow-2xl mb-3 sm:mb-4"
               >
                 <SparklesIcon className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 mr-2 sm:mr-3" />
                 <span>We&apos;re still Gro-ing - launching soon!</span>
@@ -204,194 +204,188 @@ const Home = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-16 sm:py-24 lg:py-32 bg-white/50 backdrop-blur-sm">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <motion.div 
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
-            variants={fadeInUp}
-            className="text-center mb-12 sm:mb-16 lg:mb-20"
-          >
-            <h2 className="text-sm sm:text-base lg:text-lg font-semibold text-emerald-600 mb-3 sm:mb-4">How we do it differently</h2>
-            <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-black mb-6 sm:mb-8 leading-tight">
-              Investing that actually makes sense
-            </h3>
-            <p className="text-base sm:text-lg lg:text-xl text-gray-700 max-w-3xl mx-auto px-2">
-              No spreadsheets. No jargon. Just AI that learns your goals and works in the background—so your returns grow while your effort shrinks.
-            </p>
-          </motion.div>
-          
-          <motion.div 
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
-            variants={staggerContainer}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"
-          >
-            <motion.div 
-              variants={snapIn}
-              whileHover={noAnimation ? {} : { y: -12, scale: 1.03 }}
-              transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1] }}
-              className="group relative bg-white rounded-3xl p-6 sm:p-8 shadow-xl hover:shadow-2xl border border-emerald-100/50 text-center md:col-span-2 lg:col-span-1"
-            >
-              <motion.div 
-                whileHover={noAnimation ? {} : { rotate: 15, scale: 1.1 }}
-                transition={{ duration: 0.3 }}
-                className="mx-auto flex h-16 w-16 sm:h-20 sm:w-20 items-center justify-center rounded-2xl bg-emerald-500 mb-4 sm:mb-6 shadow-lg group-hover:shadow-emerald-500/50"
-              >
-                <ArrowTrendingUpIcon className="h-8 w-8 sm:h-10 sm:w-10 text-white" />
-              </motion.div>
-              <h4 className="text-xl sm:text-2xl font-bold text-black mb-3 sm:mb-4">
-                Goals
-              </h4>
-              <p className="text-gray-700 leading-relaxed text-base sm:text-lg">
-                Tell us what you&apos;re saving for – house deposit, dream holiday, or financial freedom. 
-                Our AI creates a personalized roadmap just for you.
-              </p>
-            </motion.div>
-            
-            <motion.div 
-              variants={snapIn}
-              whileHover={noAnimation ? {} : { y: -12, scale: 1.03 }}
-              transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1] }}
-              className="group relative bg-white rounded-3xl p-6 sm:p-8 shadow-xl hover:shadow-2xl border border-emerald-100/50 text-center"
-            >
-              <motion.div 
-                whileHover={noAnimation ? {} : { rotate: 15, scale: 1.1 }}
-                transition={{ duration: 0.3 }}
-                className="mx-auto flex h-16 w-16 sm:h-20 sm:w-20 items-center justify-center rounded-2xl bg-emerald-500 mb-4 sm:mb-6 shadow-lg group-hover:shadow-emerald-500/50"
-              >
-                <ChartBarIcon className="h-8 w-8 sm:h-10 sm:w-10 text-white" />
-              </motion.div>
-              <h4 className="text-xl sm:text-2xl font-bold text-black mb-3 sm:mb-4">
-                Returns
-              </h4>
-              <p className="text-gray-700 leading-relaxed text-base sm:text-lg">
-                Watch your money grow with AI-optimized portfolios. We analyze thousands of stocks 
-                to find the best opportunities while you focus on living your life.
-              </p>
-            </motion.div>
-            
-            <motion.div 
-              variants={snapIn}
-              whileHover={noAnimation ? {} : { y: -12, scale: 1.03 }}
-              transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1] }}
-              className="group relative bg-white rounded-3xl p-6 sm:p-8 shadow-xl hover:shadow-2xl border border-emerald-100/50 text-center"
-            >
-              <motion.div 
-                whileHover={noAnimation ? {} : { rotate: 15, scale: 1.1 }}
-                transition={{ duration: 0.3 }}
-                className="mx-auto flex h-16 w-16 sm:h-20 sm:w-20 items-center justify-center rounded-2xl bg-emerald-500 mb-4 sm:mb-6 shadow-lg group-hover:shadow-emerald-500/50"
-              >
-                <ShieldCheckIcon className="h-8 w-8 sm:h-10 sm:w-10 text-white" />
-              </motion.div>
-              <h4 className="text-xl sm:text-2xl font-bold text-black mb-3 sm:mb-4">
-                Outcomes
-              </h4>
-              <p className="text-gray-700 leading-relaxed text-base sm:text-lg">
-                Reach milestones faster with less effort. Track progress in real time and celebrate each outcome along the way.
-              </p>
-            </motion.div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* How It Works */}
-      <section className="py-16 sm:py-24 lg:py-32 bg-emerald-50">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <motion.div 
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
-            variants={fadeInUp}
-            className="text-center mb-12 sm:mb-16 lg:mb-20"
-          >
-            <h2 className="text-sm sm:text-base lg:text-lg font-semibold text-emerald-600 mb-3 sm:mb-4">Super simple process</h2>
-            <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-black mb-6 sm:mb-8 leading-tight">
-              From broke to goals in 3 steps
-            </h3>
-            <p className="text-base sm:text-lg lg:text-xl text-gray-700 max-w-3xl mx-auto px-2">
-              No finance degree required. Set your goals, let Gro crunch the numbers, and watch your effort-to-outcome ratio flip in your favour.
-            </p>
-          </motion.div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10 lg:gap-12">
-            <motion.div 
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.3 }}
-              variants={fadeInLeft}
-              whileHover={noAnimation ? {} : { scale: 1.05, y: -8 }}
-              transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1] }}
-              className="relative bg-white rounded-3xl p-6 sm:p-8 lg:p-10 shadow-xl border border-gray-100 group text-center md:col-span-2 lg:col-span-1"
-            >
-              <motion.div 
-                whileHover={noAnimation ? {} : { scale: 1.2, rotate: 10 }}
-                whileTap={noAnimation ? {} : { scale: 0.9 }}
-                transition={{ duration: 0.2 }}
-                className="flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-2xl bg-emerald-500 text-white font-bold text-lg sm:text-xl lg:text-2xl mb-6 sm:mb-8 shadow-lg group-hover:shadow-emerald-500/50 mx-auto"
-              >
-                1
-              </motion.div>
-              <h4 className="text-xl sm:text-2xl font-bold text-black mb-4 sm:mb-6">Dream it</h4>
-              <p className="text-gray-700 leading-relaxed text-base sm:text-lg">
-                House deposit? Early retirement? That startup idea? Tell us your goals and when you want to achieve them. 
-                We&apos;ll calculate exactly how much you need to invest.
-              </p>
-            </motion.div>
-            
-            <motion.div 
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.3 }}
-              variants={fadeInUp}
-              whileHover={noAnimation ? {} : { scale: 1.05, y: -8 }}
-              transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1], delay: noAnimation ? 0 : 0.1 }}
-              className="relative bg-white rounded-3xl p-6 sm:p-8 lg:p-10 shadow-xl border border-gray-100 group text-center"
-            >
-              <motion.div 
-                whileHover={noAnimation ? {} : { scale: 1.2, rotate: 10 }}
-                whileTap={noAnimation ? {} : { scale: 0.9 }}
-                transition={{ duration: 0.2 }}
-                className="flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-2xl bg-emerald-500 text-white font-bold text-lg sm:text-xl lg:text-2xl mb-6 sm:mb-8 shadow-lg group-hover:shadow-emerald-500/50 mx-auto"
-              >
-                2
-              </motion.div>
-              <h4 className="text-xl sm:text-2xl font-bold text-black mb-4 sm:mb-6">AI builds it</h4>
-              <p className="text-gray-700 leading-relaxed text-base sm:text-lg">
-                Our AI analyzes thousands of stocks and creates 5 custom portfolios designed specifically for your goals. 
-                Pick your favorite and you&apos;re done!
-              </p>
-            </motion.div>
-            
-            <motion.div 
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.3 }}
-              variants={fadeInRight}
-              whileHover={noAnimation ? {} : { scale: 1.05, y: -8 }}
-              transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1], delay: noAnimation ? 0 : 0.2 }}
-              className="relative bg-white rounded-3xl p-6 sm:p-8 lg:p-10 shadow-xl border border-gray-100 group text-center md:col-span-2 lg:col-span-1"
-            >
-              <motion.div 
-                whileHover={noAnimation ? {} : { scale: 1.2, rotate: 10 }}
-                whileTap={noAnimation ? {} : { scale: 0.9 }}
-                transition={{ duration: 0.2 }}
-                className="flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-2xl bg-emerald-500 text-white font-bold text-lg sm:text-xl lg:text-2xl mb-6 sm:mb-8 shadow-lg group-hover:shadow-emerald-500/50 mx-auto"
-              >
-                3
-              </motion.div>
-              <h4 className="text-xl sm:text-2xl font-bold text-black mb-4 sm:mb-6">Watch it grow</h4>
-              <p className="text-gray-700 leading-relaxed text-base sm:text-lg">
-                Sit back and watch your money work harder than you do. Track progress, get insights, 
-                and celebrate hitting your milestones. Your future self will thank you!
-              </p>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
+<section className="py-16 sm:py-24 lg:py-32 bg-white/50 backdrop-blur-sm">
+  <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <motion.div 
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.3 }}
+      variants={fadeInUp}
+      className="text-center mb-12 sm:mb-16 lg:mb-20"
+    >
+      <h2 className="text-sm sm:text-base lg:text-lg font-semibold text-emerald-600 mb-3 sm:mb-4">How we do it differently</h2>
+      <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-black mb-6 sm:mb-8 leading-tight">
+        Investing that actually makes sense
+      </h3>
+      <p className="text-base sm:text-lg lg:text-xl text-gray-700 max-w-3xl mx-auto px-2">
+        Gro's AI builds personalized portfolios for your actual goals while you focus on everything else. Progress on autopilot.
+      </p>
+    </motion.div>
+    
+    <motion.div 
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }}
+      variants={staggerContainer}
+      className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"
+    >
+      <motion.div 
+        variants={snapIn}
+        whileHover={noAnimation ? {} : { y: -12, scale: 1.03 }}
+        transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1] }}
+        className="group relative bg-white rounded-3xl p-6 sm:p-8 shadow-xl hover:shadow-2xl border border-emerald-100/50 text-center md:col-span-2 lg:col-span-1"
+      >
+        <motion.div 
+          whileHover={noAnimation ? {} : { rotate: 15, scale: 1.1 }}
+          transition={{ duration: 0.3 }}
+          className="mx-auto flex h-16 w-16 sm:h-20 sm:w-20 items-center justify-center rounded-2xl bg-emerald-500 mb-4 sm:mb-6 shadow-lg group-hover:shadow-emerald-500/50"
+        >
+          <ArrowTrendingUpIcon className="h-8 w-8 sm:h-10 sm:w-10 text-white" />
+        </motion.div>
+        <h4 className="text-xl sm:text-2xl font-bold text-black mb-3 sm:mb-4">
+          Goals
+        </h4>
+        <p className="text-gray-700 leading-relaxed text-base sm:text-lg">
+          House deposit. Dream holiday. Retirement. Tell us what matters and AI builds your personalized roadmap in under 3 minutes.
+        </p>
+      </motion.div>
+      
+      <motion.div 
+        variants={snapIn}
+        whileHover={noAnimation ? {} : { y: -12, scale: 1.03 }}
+        transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1] }}
+        className="group relative bg-white rounded-3xl p-6 sm:p-8 shadow-xl hover:shadow-2xl border border-emerald-100/50 text-center"
+      >
+        <motion.div 
+          whileHover={noAnimation ? {} : { rotate: 15, scale: 1.1 }}
+          transition={{ duration: 0.3 }}
+          className="mx-auto flex h-16 w-16 sm:h-20 sm:w-20 items-center justify-center rounded-2xl bg-emerald-500 mb-4 sm:mb-6 shadow-lg group-hover:shadow-emerald-500/50"
+        >
+          <ChartBarIcon className="h-8 w-8 sm:h-10 sm:w-10 text-white" />
+        </motion.div>
+        <h4 className="text-xl sm:text-2xl font-bold text-black mb-3 sm:mb-4">
+          Returns
+        </h4>
+        <p className="text-gray-700 leading-relaxed text-base sm:text-lg">
+          AI analyzes thousands of market scenarios to optimize your portfolio. Your money grows smarter while you sleep.
+        </p>
+      </motion.div>
+      
+      <motion.div 
+        variants={snapIn}
+        whileHover={noAnimation ? {} : { y: -12, scale: 1.03 }}
+        transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1] }}
+        className="group relative bg-white rounded-3xl p-6 sm:p-8 shadow-xl hover:shadow-2xl border border-emerald-100/50 text-center"
+      >
+        <motion.div 
+          whileHover={noAnimation ? {} : { rotate: 15, scale: 1.1 }}
+          transition={{ duration: 0.3 }}
+          className="mx-auto flex h-16 w-16 sm:h-20 sm:w-20 items-center justify-center rounded-2xl bg-emerald-500 mb-4 sm:mb-6 shadow-lg group-hover:shadow-emerald-500/50"
+        >
+          <ShieldCheckIcon className="h-8 w-8 sm:h-10 sm:w-10 text-white" />
+        </motion.div>
+        <h4 className="text-xl sm:text-2xl font-bold text-black mb-3 sm:mb-4">
+          Outcomes
+        </h4>
+        <p className="text-gray-700 leading-relaxed text-base sm:text-lg">
+          Track real-time progress toward your goals. Celebrate milestones. Achieve outcomes faster with zero spreadsheets.
+        </p>
+      </motion.div>
+    </motion.div>
+  </div>
+</section>
+  {/* How It Works */}
+<section className="py-16 sm:py-24 lg:py-32 bg-emerald-50">
+  <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <motion.div 
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.3 }}
+      variants={fadeInUp}
+      className="text-center mb-12 sm:mb-16 lg:mb-20"
+    >
+      <h2 className="text-sm sm:text-base lg:text-lg font-semibold text-emerald-600 mb-3 sm:mb-4">Super simple process</h2>
+      <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-black mb-6 sm:mb-8 leading-tight">
+        From zero to invested in 3 steps
+      </h3>
+      <p className="text-base sm:text-lg lg:text-xl text-gray-700 max-w-3xl mx-auto px-2">
+        No finance degree required. No endless research. Just your goals and AI that does the heavy lifting.
+      </p>
+    </motion.div>
+    
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10 lg:gap-12">
+      <motion.div 
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        variants={fadeInLeft}
+        whileHover={noAnimation ? {} : { scale: 1.05, y: -8 }}
+        transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1] }}
+        className="relative bg-white rounded-3xl p-6 sm:p-8 lg:p-10 shadow-xl border border-gray-100 group text-center md:col-span-2 lg:col-span-1"
+      >
+        <motion.div 
+          whileHover={noAnimation ? {} : { scale: 1.2, rotate: 10 }}
+          whileTap={noAnimation ? {} : { scale: 0.9 }}
+          transition={{ duration: 0.2 }}
+          className="flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-2xl bg-emerald-500 text-white font-bold text-lg sm:text-xl lg:text-2xl mb-6 sm:mb-8 shadow-lg group-hover:shadow-emerald-500/50 mx-auto"
+        >
+          1
+        </motion.div>
+        <h4 className="text-xl sm:text-2xl font-bold text-black mb-4 sm:mb-6">Set your goal</h4>
+        <p className="text-gray-700 leading-relaxed text-base sm:text-lg">
+          House deposit. Early retirement. Dream holiday. Tell us what you want and when. 
+          Takes 2 minutes.
+        </p>
+      </motion.div>
+      
+      <motion.div 
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        variants={fadeInUp}
+        whileHover={noAnimation ? {} : { scale: 1.05, y: -8 }}
+        transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1], delay: noAnimation ? 0 : 0.1 }}
+        className="relative bg-white rounded-3xl p-6 sm:p-8 lg:p-10 shadow-xl border border-gray-100 group text-center"
+      >
+        <motion.div 
+          whileHover={noAnimation ? {} : { scale: 1.2, rotate: 10 }}
+          whileTap={noAnimation ? {} : { scale: 0.9 }}
+          transition={{ duration: 0.2 }}
+          className="flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-2xl bg-emerald-500 text-white font-bold text-lg sm:text-xl lg:text-2xl mb-6 sm:mb-8 shadow-lg group-hover:shadow-emerald-500/50 mx-auto"
+        >
+          2
+        </motion.div>
+        <h4 className="text-xl sm:text-2xl font-bold text-black mb-4 sm:mb-6">AI optimizes</h4>
+        <p className="text-gray-700 leading-relaxed text-base sm:text-lg">
+          Our AI builds 5 custom portfolios optimized for your timeline and risk tolerance. Pick one, done.
+        </p>
+      </motion.div>
+      
+      <motion.div 
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        variants={fadeInRight}
+        whileHover={noAnimation ? {} : { scale: 1.05, y: -8 }}
+        transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1], delay: noAnimation ? 0 : 0.2 }}
+        className="relative bg-white rounded-3xl p-6 sm:p-8 lg:p-10 shadow-xl border border-gray-100 group text-center md:col-span-2 lg:col-span-1"
+      >
+        <motion.div 
+          whileHover={noAnimation ? {} : { scale: 1.2, rotate: 10 }}
+          whileTap={noAnimation ? {} : { scale: 0.9 }}
+          transition={{ duration: 0.2 }}
+          className="flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-2xl bg-emerald-500 text-white font-bold text-lg sm:text-xl lg:text-2xl mb-6 sm:mb-8 shadow-lg group-hover:shadow-emerald-500/50 mx-auto"
+        >
+          3
+        </motion.div>
+        <h4 className="text-xl sm:text-2xl font-bold text-black mb-4 sm:mb-6">Track progress</h4>
+        <p className="text-gray-700 leading-relaxed text-base sm:text-lg">
+          Let your money grow on while you sleep. Track milestones in real-time. Reach your goals faster with zero spreadsheets.
+        </p>
+      </motion.div>
+    </div>
+  </div>
+</section>
       {/* CTA Section */}
       <motion.section 
         initial="hidden"
