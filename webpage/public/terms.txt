@@ -1,0 +1,1289 @@
+GRO TERMS AND CONDITIONS
+Last Updated: [Date]
+Effective Date: [Date]
+
+1. INTRODUCTION AND ACCEPTANCE
+1.1 About These Terms
+These Terms and Conditions ("Terms") govern your use of the Gro mobile application and web platform (collectively, the "Platform") operated by Gro Equity Ltd ("Gro," "we," "us," or "our"), a company registered in England and Wales under company number 16762013, with registered office at [Address].
+1.2 Acceptance of Terms
+By creating an account, accessing, or using the Platform, you agree to be bound by these Terms. If you do not agree to these Terms, you must not use the Platform.
+1.3 Changes to Terms
+We may modify these Terms at any time. We will notify you of material changes via email or in-app notification at least 30 days before they take effect. Your continued use of the Platform after changes become effective constitutes acceptance of the modified Terms.
+1.4 Regulatory Status
+Gro Equity Ltd is currently operating as a pre-authorized entity and is building our platform to meet Financial Conduct Authority (FCA) standards. We are in the process of obtaining full FCA authorization.
+Current Status:
+
+Company registered in England and Wales under company number 16762013
+Registered office at [Address]
+Operating under FCA regulatory guidance for pre-authorized firms
+Building systems and processes to meet full FCA authorization requirements
+
+What this means for you:
+
+All investment services are provided through our regulated external broker partner
+We are committed to operating with full regulatory compliance
+Your investments are held in custody by our external broker and protected by applicable investor protection schemes
+We will notify you when we receive full FCA authorization
+
+Important: Until we receive full FCA authorization, certain services may be limited. We will update these Terms and notify you of any changes to our regulatory status.
+
+2. DEFINITIONS
+"Account" means your Gro user account.
+"AI Services" means our artificial intelligence-powered portfolio optimization, goal matching, and investment recommendation features.
+"External Broker" means our third-party broker-dealer and custodian partner responsible for trade execution, custody, and regulatory compliance.
+"Goal Training" means our gamified educational courses and lessons.
+"Investment Services" means the investment advisory and portfolio management services we provide.
+"Just One Tree" means Just One Tree (https://www.justonetree.life/), our environmental partner organization responsible for tree planting.
+"Platform" means the Gro mobile applications (iOS and Android) and website.
+"Portfolio" means your collection of investments managed through the Platform.
+"XP" means experience points earned through Platform engagement.
+"Tree Planting Program" means our environmental initiative where one tree is planted for every £100 invested, executed through Just One Tree within 6 months of contribution.
+
+3. ELIGIBILITY AND ACCOUNT REGISTRATION
+3.1 Eligibility Requirements
+To use the Platform, you must:
+
+Be at least 18 years of age
+Be a resident of the United Kingdom
+Have the legal capacity to enter into binding contracts
+Not be prohibited from using financial services under any applicable law
+Pass our identity verification and anti-money laundering (AML) checks
+
+3.2 Account Registration
+You must provide accurate, complete, and current information during registration, including:
+
+Full legal name
+Date of birth
+Residential address
+National Insurance number
+Valid email address and phone number
+Bank account details for funding
+
+3.3 Account Verification
+We use third-party services to verify your identity and comply with AML regulations. You authorize us to:
+
+Verify your identity using government databases
+Conduct credit checks if necessary
+Request additional documentation (passport, driver's license, utility bills)
+Reject your application if verification fails
+
+3.4 Account Security
+You are responsible for:
+
+Maintaining the confidentiality of your login credentials
+All activities that occur under your account
+Notifying us immediately of any unauthorized access
+Using strong passwords and enabling two-factor authentication
+
+We are not liable for losses resulting from unauthorized account access due to your failure to maintain security.
+3.5 Account Suspension or Termination
+We reserve the right to suspend or terminate your account if:
+
+You breach these Terms
+We suspect fraudulent or illegal activity
+Required by law or regulatory authorities
+You fail identity verification
+Your account remains inactive for more than 24 months
+
+
+4. INVESTMENT SERVICES
+4.1 Nature of Services
+Gro provides:
+
+Goal-based investment advisory services
+AI-powered portfolio construction and optimization
+Automated portfolio rebalancing
+Investment execution through our external broker partner
+Performance tracking and reporting
+
+4.2 Pre-Authorization Limitations
+As a pre-authorized entity, our services are provided in partnership with our external broker. We act as a technology platform and advisory service, while our external broker handles all regulated investment activities including trade execution, custody, and regulatory compliance.
+4.3 Investment Advice and AI Recommendations
+Our AI provides personalized investment recommendations based on:
+
+Your stated financial goals
+Risk tolerance assessment
+Investment timeline
+Current financial situation
+Market conditions
+
+IMPORTANT RISK DISCLOSURE:
+
+All investments carry risk, including the potential loss of principal
+Past performance does not guarantee future results
+While our AI uses sophisticated algorithms including Black-Scholes models, Modern Portfolio Theory, Monte Carlo simulations, and Graham's value investing principles, all recommendations are based on historical data and projections that may not predict future performance
+Market conditions can change rapidly and unexpectedly
+Your actual returns may differ significantly from projections
+You could lose some or all of your invested capital
+
+4.4 Goal Setting and Matching
+Our OpenAI-powered goal matching service:
+
+Interprets your financial objectives in natural language
+Translates goals into quantitative investment strategies
+Suggests appropriate timelines and contribution amounts
+Adjusts recommendations as your goals evolve
+
+Important: Goal achievement depends on multiple factors including market performance, consistent contributions, timeline accuracy, and economic conditions—all of which are beyond our control. We cannot guarantee you will achieve your stated goals.
+4.5 Portfolio Construction
+We construct portfolios using:
+
+Diversified equity and fixed-income securities
+Exchange-traded funds (ETFs)
+Individual stocks selected by our AI algorithms
+Cash holdings as appropriate for liquidity and risk management
+
+By using the Platform, you authorize us to provide investment recommendations and, upon your approval, instruct our external broker to execute trades on your behalf within your selected portfolio strategy.
+4.6 Automatic Rebalancing
+Your portfolio will be automatically rebalanced:
+
+When allocations drift beyond predetermined thresholds (typically ±5%)
+When market conditions warrant strategic adjustments
+When you modify your goals or risk tolerance
+At least quarterly, or more frequently if market conditions require
+
+You will receive notification of significant rebalancing events. Rebalancing may trigger taxable events.
+4.7 Investment Restrictions
+We do not currently offer:
+
+Margin trading or leveraged positions
+Options or derivatives trading
+Cryptocurrency investments
+Individual bond purchases
+Alternative investments (hedge funds, private equity, commodities)
+Short selling
+
+4.8 Minimum Investment
+The minimum initial investment is £10. Subsequent contributions have no minimum.
+4.9 Suitability Assessment
+Before investing, you must complete a suitability questionnaire covering:
+
+Financial situation and net worth
+Investment experience and knowledge
+Risk tolerance and capacity for loss
+Investment objectives and time horizon
+Liquidity needs
+
+We reserve the right to reject investment applications if we determine our services are not suitable for your circumstances.
+
+5. CUSTODY AND EXECUTION
+5.1 Third-Party Custody
+Your investments are held in custody by our external broker partner, a regulated broker-dealer authorized to provide custody and execution services.
+5.2 Segregated Accounts
+Your assets are held in your name in a segregated account and are not commingled with Gro Equity Ltd's corporate assets or operational funds.
+5.3 Investor Protection
+Your account with our external broker is protected by applicable investor protection schemes as required by the relevant financial regulatory authorities. Specific protection limits and terms will be provided in the external broker's account documentation.
+Important: Investor protection covers losses from broker-dealer insolvency, not investment losses due to market performance.
+5.4 Trade Execution
+All trades are executed by our external broker according to their best execution policies and procedures. Key points:
+
+We do not receive payment for order flow
+Trade execution typically occurs within 1-2 business days of our instruction
+Trades are subject to market hours and settlement cycles
+You may experience price variations between order submission and execution
+Execution may be delayed due to market volatility, technical issues, or regulatory requirements
+
+5.5 No Ownership of Client Assets by Gro
+Gro Equity Ltd does not take ownership, custody, or possession of your investments at any time. We act solely as a technology platform and investment advisor. Your relationship with our external broker is governed by the external broker's separate terms and conditions.
+5.6 External Broker Account Agreement
+By using the Platform, you acknowledge that you will also be bound by our external broker's customer agreement and related disclosures. You should review the external broker's terms carefully, as they govern the custody and execution of your investments. Details of our external broker partner will be provided during account opening.
+
+6. FEES AND CHARGES
+6.1 Service Fee Structure
+We charge a 5% service fee on all investment contributions. This fee is deducted at the time of contribution before funds are invested.
+Example: If you contribute £100, £5 is retained as the service fee and £95 is invested in your portfolio.
+What the service fee funds:
+
+Platform operations and development
+AI technology and infrastructure
+Customer support
+Tree planting initiatives (1 tree per £100 invested through Just One Tree)
+Regulatory compliance and licensing costs
+
+6.2 Management Fee
+[Option A: We currently do not charge an ongoing management fee for assets under management. We reserve the right to introduce a management fee in the future with 90 days' written notice.]
+[Option B: We charge an annual management fee of [X]% of assets under management, calculated daily and deducted monthly from your account.]
+6.3 Fee Reductions and Incentives
+You may earn fee reductions through our rewards program:
+
+Contribution Streaks: Maintain consistent monthly contributions to earn up to [X]% fee reduction
+Referral Rewards: Receive [X]% fee reduction per successful referral (maximum [X]% total reduction)
+High Balance Tier: Accounts over £[X] qualify for reduced fee rates
+XP Redemption: Use earned XP to offset fees
+
+Fee reductions are applied automatically to your account and detailed in your monthly statements.
+6.4 Third-Party Fees
+You may incur additional fees not charged by Gro Equity Ltd:
+ETF and Fund Expenses:
+
+Expense ratios typically range from 0.05% - 0.50% annually
+These fees are embedded in fund prices and not separately charged
+
+Banking Fees:
+
+Your bank may charge fees for transfers, direct debits, or currency conversion
+We do not control or receive any portion of these fees
+
+External Broker Fees:
+
+Our external broker may charge regulatory transaction fees, wire transfer fees, or account closure fees
+Refer to the external broker's fee schedule for details
+
+Tax-Related Fees:
+
+Potential capital gains taxes on investment profits
+You are responsible for all tax obligations
+
+6.5 Fee Transparency and Disclosure
+You will receive clear disclosure of all fees:
+
+At account opening (in the account agreement)
+In your monthly account statements
+In your annual summary report
+On our website Fee Schedule page
+
+6.6 Fee Changes
+We may change our fee structure with 60 days' written notice via email and in-app notification. If you disagree with fee changes, you may close your account without penalty within 30 days of the notice.
+
+7. FUNDING AND WITHDRAWALS
+7.1 Funding Methods
+You may fund your account via:
+
+UK bank transfer (Faster Payments Service)
+Direct debit for recurring contributions
+One-time or scheduled deposits
+
+7.2 Funding Requirements and Restrictions
+
+All funds must originate from a UK bank account in your legal name
+We do not accept: cash, checks, money orders, third-party payments, or cryptocurrency
+Minimum initial deposit: £10
+Minimum recurring contribution: £10
+Maximum single deposit: £50,000 (higher limits available upon verification)
+Anti-money laundering (AML) checks may apply to large deposits
+
+7.3 Deposit Processing Time
+
+Faster Payments: Typically 1-3 business days
+Direct Debit: Processed according to your selected schedule (usually 3-5 business days)
+Funds must fully clear before being invested
+Market closures and holidays may delay processing
+
+7.4 Investment Timing
+
+Deposits received and cleared before 2:00 PM GMT on a business day are typically invested the same day (subject to market hours)
+Deposits after 2:00 PM GMT are invested the next business day
+Actual investment timing depends on market conditions and our external broker's execution schedule
+
+7.5 Withdrawal Requests
+You may request withdrawals at any time through the Platform:
+
+Partial withdrawals: Minimum £50
+Full withdrawals: Close your account and withdraw all funds
+Processing timeline:
+
+Request submitted by 2:00 PM GMT: Liquidation initiated same business day
+Request after 2:00 PM GMT: Liquidation initiated next business day
+Funds typically arrive in your bank account 3-7 business days after liquidation
+
+
+
+7.6 Withdrawal Process
+When you request a withdrawal:
+
+We instruct our external broker to liquidate the necessary positions
+Liquidation typically occurs within 1-2 business days
+Proceeds settle according to standard settlement cycles (T+2 for stocks, T+1 for ETFs)
+Funds are transferred to your registered UK bank account
+You receive confirmation at each stage
+
+7.7 Withdrawal Restrictions and Delays
+Withdrawals may be delayed or restricted if:
+
+You have pending trades or unsettled transactions
+Your account is under review for fraud or compliance reasons
+Required by law, court order, or regulatory authority
+There are technical issues with our external broker or banking systems
+Market conditions prevent timely liquidation
+Additional identity verification is required (typically for withdrawals over £10,000)
+
+7.8 Tax Implications
+
+Withdrawals may trigger capital gains tax obligations
+We do not withhold taxes automatically (except where required by law)
+You are solely responsible for reporting and paying all applicable taxes
+We provide annual tax reporting documents to assist with your tax filing
+
+7.9 Dormant Accounts
+If your account remains inactive (no logins, contributions, or withdrawals) for 24 consecutive months:
+
+We may classify your account as dormant
+You will receive notification via email
+Dormant accounts may be subject to account maintenance fees
+After 36 months of inactivity, we may liquidate your account and return funds to your registered bank account
+
+
+8. GOAL TRAINING AND GAMIFICATION
+8.1 Goal Training Courses
+Our Goal Training feature provides:
+
+Interactive financial education modules tailored to your specific goals
+Bite-sized lessons (2-5 minutes each) designed for mobile consumption
+Personalized learning paths based on your financial objectives
+Daily check-ins to reinforce learning and track progress
+Adaptive content powered by AI that evolves with your needs
+
+Available Goal Training Courses:
+
+First-Time Buyer: Learn strategies for saving and investing toward a house deposit
+Retirement Ready: Build knowledge for long-term wealth accumulation
+Freedom Fund: Understand paths to financial independence
+Travel Goals: Plan and invest for dream holidays and experiences
+Emergency Fund: Master the fundamentals of financial security
+
+8.2 Educational Purpose Only
+Goal Training content is for educational purposes only and does not constitute:
+
+Personalized financial advice beyond your investment portfolio recommendations
+Tax advice or tax planning services
+Legal advice
+Guarantees of investment success or goal achievement
+Professional certification or accreditation
+
+You should consult with qualified professionals for specific financial, tax, or legal advice.
+8.3 XP (Experience Points)
+You earn XP by:
+
+Completing Goal Training lessons and modules
+Maintaining investment contribution streaks
+Reaching investment milestones (first £100, £1,000, £10,000, etc.)
+Engaging with the Platform regularly (daily logins, goal updates)
+Participating in community features
+
+XP accumulates in your account and can be tracked via your dashboard.
+8.4 XP Redemption
+XP can be redeemed for:
+
+Fractional shares of stocks from our curated list of available securities
+Bonus tree plantings beyond your standard planting allocation through Just One Tree
+Premium platform features including advanced analytics and insights
+Fee discounts on future service fees
+
+XP to Stock Conversion:
+
+XP values and conversion rates are displayed in the app
+Stocks purchased with XP become part of your investment portfolio
+XP-purchased stocks are subject to all the same terms as cash-funded investments
+Available stocks for XP redemption are determined by Gro and may change
+
+8.5 XP Terms and Conditions
+
+XP has no cash value and cannot be exchanged for currency
+XP cannot be transferred between accounts or to other users
+XP expires after 24 months of account inactivity
+We reserve the right to adjust XP earning rates, redemption values, or program terms with 30 days' notice
+We may revoke XP if earned through fraudulent activity or Terms violations
+Stocks purchased with XP are subject to the same custody, execution, and withdrawal terms as all other investments
+
+8.6 Achievements and Rewards
+We offer achievements to recognize your progress:
+
+"Investor of the Month" - Recognition for top-performing users based on consistency and engagement
+Streak Milestones - Badges for 7, 30, 90, 180, and 365-day contribution streaks
+Goal Completion - Special recognition when you reach your financial goals
+Community Leaderboard Rankings - Anonymous competition with other users
+
+Achievement Terms:
+
+Achievements are for motivational and gamification purposes only
+Achievements confer no legal rights, guaranteed benefits, or monetary value
+Recognition criteria may be adjusted at our discretion
+We reserve the right to revoke achievements obtained through fraudulent means
+
+8.7 Community Features
+The Platform may include social and community elements:
+
+Anonymous leaderboards showing user rankings by XP, streaks, or goal progress
+Goal-sharing functionality to inspire and motivate other users
+Community forums or discussion features for financial education topics
+Achievement showcasing to celebrate milestones
+
+Community Guidelines - You agree NOT to:
+
+Share personally identifiable information (yours or others')
+Provide investment advice or recommendations to other users
+Engage in harassment, bullying, or abusive behavior
+Post spam, promotional content, or commercial solicitations
+Impersonate other users or Gro employees
+Share false or misleading information
+Violate any applicable laws or regulations
+
+We reserve the right to:
+
+Moderate, edit, or remove user-generated content
+Suspend or ban users who violate community guidelines
+Restrict access to community features at any time
+Terminate community features entirely with 30 days' notice
+
+
+9. TREE PLANTING PROGRAM
+9.1 Program Description
+For every £100 you invest through Gro, we plant one tree through Just One Tree (https://www.justonetree.life/), our environmental partner organization.
+Calculation Examples:
+
+Invest £50 = 0.5 trees (rounded to nearest tree after multiple contributions)
+Invest £250 = 2 trees planted
+Invest £1,000 = 10 trees planted
+Invest £10,000 = 100 trees planted
+
+Trees are tracked cumulatively across all your contributions.
+9.2 Tree Planting Process and Timeline
+
+Trees are counted based on total invested amount (after service fees)
+Tree planting occurs within 6 months from your contribution date
+Trees are planted in batches to optimize logistics and align with appropriate planting seasons
+You can track your tree count and planting status via the Platform
+Tree planting is managed by Just One Tree and their global reforestation partners
+Planting locations vary based on current reforestation needs and Just One Tree's active projects worldwide
+
+9.3 Environmental Impact Tracking
+Your Impact Dashboard displays:
+
+Total number of trees planted from your investments
+Planting status (pending, scheduled, planted, confirmed)
+Expected planting date (within 6 months of contribution)
+Estimated CO₂ offset (in tonnes)
+Global map showing general planting regions via Just One Tree
+Cumulative environmental impact over time
+Annual impact summary reports
+
+9.4 Environmental Impact Calculations
+CO₂ offset and environmental impact calculations are estimates based on:
+
+Average tree species carbon sequestration rates (typically 20-30kg CO₂ per year per tree)
+Tree survival rates and maturity projections
+Just One Tree's environmental research and data
+Regional climate and ecosystem factors
+
+Important Disclaimers:
+
+These are good-faith estimates based on Just One Tree's methodology, not guarantees of actual environmental impact
+Actual carbon sequestration varies by species, location, climate, and tree survival
+Impact projections assume successful tree establishment and long-term growth
+We rely on Just One Tree's verification and reporting processes
+
+9.5 Program Funding
+The Tree Planting Program is funded exclusively from our 5% service fee on contributions. Tree planting costs are not deducted separately from your investment amount.
+9.6 Just One Tree Partnership
+Just One Tree is our environmental partner responsible for:
+
+Coordinating global tree planting initiatives
+Working with verified local planting organizations
+Monitoring tree survival and growth
+Providing impact reporting and verification
+Ensuring trees are planted in areas of genuine reforestation need
+Completing tree planting within 6 months of our funding allocation
+
+You can learn more about Just One Tree's mission and projects at https://www.justonetree.life/
+9.7 Program Modifications and Sustainability
+We reserve the right to:
+
+Change the tree planting ratio (currently 1 tree per £100) with 90 days' advance notice
+Extend the 6-month planting timeline in exceptional circumstances (natural disasters, extreme weather, political instability in planting regions)
+Modify or change partner organizations if Just One Tree becomes unavailable or unsuitable
+Adjust the program structure based on operational feasibility and costs
+Discontinue the program entirely with 180 days' notice (trees already committed will still be planted)
+
+Any changes to the program will be communicated clearly via email and in-app notifications.
+9.8 Planting Timeline Exceptions
+The 6-month planting timeline may be extended in cases of:
+
+Natural disasters affecting planting regions
+Seasonal restrictions (certain trees can only be planted during specific months)
+Political instability or safety concerns in planned planting locations
+Force majeure events beyond Just One Tree's control
+
+You will be notified if your tree planting is delayed beyond 6 months, with an updated expected planting date.
+9.9 Tax Implications of Tree Planting
+The Tree Planting Program is a corporate initiative funded by Gro Equity Ltd's service fees, not your direct contributions.
+Important:
+
+Trees planted on your behalf do not constitute tax-deductible charitable contributions by you
+You cannot claim tax deductions or credits for trees planted through the program
+The environmental impact is a benefit of using the platform, not a personal charitable donation
+
+9.10 No Ownership Rights or Carbon Credits
+
+You do not own or have any legal interest in trees planted through the program
+Trees are planted on land owned or managed by Just One Tree or their partner organizations
+You cannot claim carbon credits or offsets for regulatory compliance purposes
+Trees cannot be transferred, sold, or assigned to third parties
+Upon account closure, your tree planting record is retained but no additional trees are planted for future contributions
+
+9.11 Verification and Transparency
+We are committed to transparency in our Tree Planting Program:
+
+Regular updates from Just One Tree on planting progress and locations
+Access to Just One Tree's public reporting and verification processes
+Quarterly summaries of total trees planted through Gro contributions
+Photographic evidence and project updates from planting sites
+Annual audits of tree planting fulfillment and timeline compliance
+
+
+10. DATA PROTECTION AND PRIVACY
+10.1 Overview
+Gro Equity Ltd is committed to protecting your personal data and respecting your privacy. We process your personal information in accordance with:
+
+UK General Data Protection Regulation (UK GDPR)
+Data Protection Act 2018
+Privacy and Electronic Communications Regulations (PECR)
+Other applicable data protection laws
+
+10.2 Types of Data We Collect
+We collect and process various types of personal data necessary to provide our investment services, including but not limited to:
+
+Identity and contact information (name, date of birth, address, email, phone number, National Insurance number)
+Financial information (bank details, investment amounts, portfolio holdings, net worth, transaction history)
+Transaction data (deposits, withdrawals, trades, performance metrics)
+Usage and technical data (app interactions, device information, IP address, browser type)
+Goal Training progress (lessons completed, XP earned, achievements)
+Communications (support requests, feedback, correspondence with our team)
+
+10.3 How We Use Your Data
+We use your personal data to:
+
+Provide investment advisory services and manage your account
+Execute trades through our external broker partner
+Allocate tree planting through Just One Tree
+Personalize AI recommendations and Goal Training content
+Process deposits, withdrawals, and fee calculations
+Comply with legal and regulatory obligations (AML, KYC, tax reporting)
+Prevent fraud, money laundering, and ensure platform security
+Improve our services and develop new features
+Communicate with you about your account, services, and updates
+Provide customer support and respond to inquiries
+
+10.4 Legal Basis for Processing
+We process your personal data under various legal bases including:
+
+Contract performance - to provide our investment services and fulfill our obligations to you
+Legal obligations - to comply with FCA regulations, AML laws, tax requirements, and other legal duties
+Legitimate interests - to improve our services, prevent fraud, and operate our business efficiently
+Consent - where you have given explicit consent (e.g., marketing communications, optional features)
+
+10.5 Data Sharing and Third Parties
+We may share your data with trusted third parties including:
+
+Our external broker (for custody, trade execution, and regulatory compliance)
+Payment processors and banking partners (for deposits and withdrawals)
+Identity verification and AML compliance services (for KYC checks)
+AI service providers (including OpenAI for goal matching and recommendations)
+Just One Tree (anonymized data for tree planting allocation and impact reporting)
+Cloud infrastructure providers (for secure data storage and platform operations)
+Analytics and performance monitoring services (for platform improvement)
+Regulatory authorities (when required by law or regulation)
+Professional advisors (legal, compliance, audit, and tax advisors)
+Third parties in corporate transactions (in the event of merger, acquisition, or sale)
+
+We never sell your personal data to third parties for marketing purposes.
+All third-party service providers are carefully vetted and bound by contractual obligations to protect your data.
+10.6 Data Security
+We implement robust security measures to protect your data, including:
+
+End-to-end encryption for data transmission (TLS 1.2 or higher)
+Encrypted storage using industry-standard protocols (AES-256)
+Multi-factor authentication options
+Regular security audits and penetration testing
+Strict employee access controls and background checks
+Secure development practices and code reviews
+Incident response procedures and breach notification plans
+Regular security training for all staff
+
+Despite our security measures, no system is completely secure. You play a vital role in security by maintaining strong passwords and protecting your login credentials.
+10.7 Data Retention
+We retain your personal data:
+
+During active account: All data is retained for service provision
+After account closure: Minimum 7 years (as required by FCA regulations and tax laws)
+Beyond 7 years: Data may be retained if required for legal proceedings, regulatory investigations, or ongoing obligations
+Tree planting records: May be retained indefinitely for environmental impact tracking and reporting
+
+After the retention period, data will be securely deleted or anonymized.
+10.8 Your Data Rights Under UK GDPR
+You have the following rights regarding your personal data:
+Right of Access: Request copies of your personal data and information about how we process it
+Right to Rectification: Correct inaccurate or incomplete data
+Right to Erasure ("Right to be Forgotten"): Request deletion of your data (subject to legal retention requirements)
+Right to Restriction of Processing: Limit how we process your data in certain circumstances
+Right to Data Portability: Receive your data in a structured, machine-readable format and transfer it to another service provider
+Right to Object: Object to processing based on legitimate interests or for direct marketing purposes
+Right to Withdraw Consent: Stop marketing communications or withdraw consent for optional processing at any time
+Rights Related to Automated Decision-Making: Request human review of automated decisions that significantly affect you
+To exercise any of these rights, please contact our Data Protection Officer at [privacy@groequity.com] or write to us at [Address].
+We will respond to your request within one month. In complex cases, we may extend this by two additional months and will inform you of the delay.
+10.9 International Data Transfers
+Some of our service providers are located outside the UK/European Economic Area (EEA). When we transfer your data internationally, we ensure it is protected through:
+
+Standard Contractual Clauses (SCCs) approved by the UK Information Commissioner's Office
+Adequacy decisions recognizing equivalent data protection standards
+Other appropriate safeguards under UK GDPR and data protection law
+
+International transfers may occur to:
+
+United States (AI services, cloud infrastructure)
+Other jurisdictions where our service providers operate
+
+We ensure all international transfers comply with UK data protection requirements.
+10.10 Children's Privacy
+Our services are not intended for individuals under 18 years of age. We do not knowingly collect personal data from children. If you believe we have inadvertently collected data from a minor, please contact us immediately at [privacy@groequity.com] and we will delete it promptly.
+10.11 Detailed Privacy Policy
+For comprehensive information about how we collect, use, store, and protect your personal data, please read our full Privacy Policy available at:
+
+Online: [website/privacy-policy]
+Request a copy: Email [privacy@groequity.com]
+
+The Privacy Policy provides detailed information about:
+
+Specific categories of data we collect and their sources
+Detailed purposes for each type of processing
+Complete list of third-party recipients and their roles
+International transfer mechanisms and safeguards
+Your rights and step-by-step instructions for exercising them
+Data retention schedules for different data categories
+How to contact our Data Protection Officer
+How to lodge a complaint with the Information Commissioner's Office (ICO)
+Updates to our privacy practices
+
+10.12 Cookies and Tracking Technologies
+We use cookies and similar tracking technologies on our Platform to enhance your experience and analyze usage. For detailed information about:
+
+What cookies we use and their purposes
+Categories of cookies (essential, performance, functional, targeting)
+How to manage your cookie preferences
+Third-party cookies and analytics tools
+Mobile app tracking and device permissions
+
+Please read our separate Cookie Policy available at:
+
+Online: [website/cookie-policy]
+Request a copy: Email [privacy@groequity.com]
+
+You can control cookies through your browser settings, but some features may not function properly if you disable certain cookies.
+10.13 Marketing Communications
+We may send you marketing communications about:
+
+New features and service improvements
+Educational content and financial literacy resources
+Special offers, promotions, and referral programs
+Industry news and investment insights
+
+Your choices:
+
+You can opt out of marketing emails at any time by clicking "unsubscribe" in any marketing email
+You can manage communication preferences in your account settings
+Opting out of marketing does not affect essential service communications (account notifications, regulatory updates, security alerts)
+
+10.14 Updates to Privacy Practices
+We may update our data protection practices and policies from time to time to reflect:
+
+Changes in applicable laws or regulations
+New features or services
+Improvements to our security measures
+Feedback from users and regulators
+
+Material changes will be communicated to you via:
+
+Email notification to your registered email address
+Prominent in-app notification
+Notice on the Platform homepage
+
+Your continued use of the Platform after such changes constitutes acceptance of the updated practices. If you disagree with changes, you may close your account.
+10.13 Contact Information for Data Protection Matters
+For any questions, concerns, or requests regarding data protection and privacy:
+Data Protection Officer:
+Email: [privacy@groequity.com]
+Address: [Address]
+Phone: [Phone Number]
+Information Commissioner's Office (ICO):
+If you believe we have not handled your data properly, you have the right to lodge a complaint with the UK's supervisory authority:
+Information Commissioner's Office
+Wycliffe House
+Water Lane
+Wilmslow
+Cheshire SK9 5AF
+Phone: 0303 123 1113
+Website: www.ico.org.uk
+
+11. INTELLECTUAL PROPERTY
+11.1 Ownership of Platform
+The Platform, including all software, algorithms, AI models, design, graphics, text, and content, is owned by GroRetryTContinueEdit
+11. INTELLECTUAL PROPERTY
+11.1 Ownership of Platform
+The Platform, including all software, algorithms, AI models, design, graphics, text, and content, is owned by Gro Equity Ltd and protected by:
+
+Copyright laws
+Trademark laws
+Trade secret protections
+Patent rights (where applicable)
+Database rights
+
+11.2 Limited License to Use
+We grant you a limited, non-exclusive, non-transferable, revocable license to:
+
+Access and use the Platform for personal, non-commercial purposes
+Use the mobile applications on your personal devices
+View and download content for your own investment management
+Access Goal Training materials for personal education
+
+You may NOT:
+
+Copy, modify, or create derivative works of the Platform
+Reverse engineer, decompile, or disassemble our software or AI algorithms
+Remove or alter any copyright, trademark, or proprietary notices
+Use automated tools (bots, scrapers, crawlers) to access the Platform
+Resell, sublicense, or commercialize any part of the Platform
+Frame or mirror any part of the Platform on another website
+Use the Platform to create a competing service
+Extract or harvest data from the Platform
+
+11.3 Trademarks
+"Gro," "Gro Equity," the Gro logo, and other marks used on the Platform are trademarks of Gro Equity Ltd. You may not use our trademarks without prior written permission.
+Unauthorized use of our trademarks may constitute trademark infringement and unfair competition in violation of applicable laws.
+11.4 User-Generated Content
+If you submit content to the Platform (reviews, forum posts, feedback, comments, suggestions):
+
+You retain ownership of your content
+You grant us a worldwide, royalty-free, perpetual, irrevocable license to use, reproduce, modify, adapt, publish, translate, distribute, and display your content for Platform operations, marketing, and promotional purposes
+You represent and warrant that:
+
+You own or have rights to submit the content
+The content does not violate third-party rights (copyright, trademark, privacy, publicity)
+The content does not violate any laws or regulations
+The content is accurate and not misleading
+
+
+We may remove, edit, or refuse to post any content at our sole discretion
+We are not responsible for user-generated content
+
+11.5 Feedback and Suggestions
+If you provide feedback, ideas, or suggestions about the Platform ("Feedback"):
+
+We may use Feedback without any obligation to you
+You waive any rights to compensation, attribution, or royalties
+Feedback becomes our exclusive property
+We may incorporate Feedback into the Platform or future products
+You agree not to submit Feedback that is confidential or proprietary to you or third parties
+
+11.6 Third-Party Content and Links
+The Platform may contain links to third-party websites or display third-party content (including Just One Tree, our external broker, news sources, and educational materials):
+
+We do not control or endorse third-party content
+Third-party content is subject to the respective owner's terms and intellectual property rights
+We are not responsible for the accuracy, legality, or availability of third-party content
+Links do not imply endorsement or partnership
+
+11.7 Digital Millennium Copyright Act (DMCA) / Copyright Infringement
+We respect intellectual property rights. If you believe content on our Platform infringes your copyright, please notify our Copyright Agent with:
+
+Identification of the copyrighted work claimed to be infringed
+Identification of the infringing material and its location on the Platform
+Your contact information (address, phone, email)
+A statement of good faith belief that use is not authorized
+A statement that the information is accurate and you are authorized to act
+Your physical or electronic signature
+
+Copyright Agent Contact:
+Email: [copyright@groequity.com]
+Address: [Address]
+We will investigate and remove infringing content as appropriate.
+11.8 Repeat Infringer Policy
+We may terminate accounts of users who repeatedly infringe intellectual property rights.
+
+12. ACCEPTABLE USE POLICY
+12.1 Prohibited Activities
+You agree NOT to:
+
+Use the Platform for any illegal purpose or in violation of any applicable laws
+Commit fraud, provide false information, or misrepresent your identity
+Attempt to manipulate markets or engage in insider trading
+Launder money, finance terrorism, or engage in other financial crimes
+Violate any applicable securities laws, regulations, or market rules
+Harass, abuse, threaten, or harm other users or Gro employees
+Upload viruses, malware, or other malicious code
+Attempt unauthorized access to our systems, servers, or networks
+Interfere with Platform operations, security measures, or other users' access
+Use the Platform if you are under 18 years of age
+Create multiple accounts to abuse promotions, rewards, or referral programs
+Share your account credentials with others or allow unauthorized account access
+Impersonate any person or entity
+Collect or harvest user information without consent
+
+12.2 Market Abuse and Insider Trading
+You must not:
+
+Trade on material non-public information (insider trading)
+Manipulate prices or create false or misleading market activity
+Engage in coordinated trading schemes to influence prices
+Use the Platform for pump-and-dump schemes
+Front-run trades or engage in other manipulative practices
+Violate UK Market Abuse Regulation or other securities laws
+
+Violations will be reported to the Financial Conduct Authority and other relevant authorities and may result in criminal prosecution.
+12.3 Account Sharing and Security
+Your account is personal to you. You must not:
+
+Share your login credentials with others
+Allow others to use your account for any purpose
+Create accounts on behalf of others without proper authorization
+Transfer, sell, or assign your account to another person
+Use another person's account
+
+You are fully responsible for all activities under your account, whether authorized or not.
+12.4 Prohibited Content
+You must not post, upload, or transmit content that:
+
+Is illegal, fraudulent, defamatory, or obscene
+Infringes intellectual property rights
+Contains viruses, malware, or harmful code
+Is hateful, discriminatory, or promotes violence
+Violates privacy or publicity rights
+Is spam, commercial solicitation, or advertising
+Impersonates others or misrepresents affiliation
+
+12.5 Abuse of Rewards and Promotions
+You must not:
+
+Create fake accounts to claim referral bonuses
+Manipulate the XP system through fraudulent activity
+Abuse fee discount programs
+Coordinate with others to exploit promotional offers
+Use automated tools to earn rewards
+Engage in any scheme to defraud Gro or other users
+
+12.6 System Integrity
+You must not:
+
+Probe, scan, or test vulnerabilities in our systems
+Breach or circumvent security or authentication measures
+Access data not intended for you
+Overwhelm our infrastructure (denial of service attacks)
+Interfere with other users' access or enjoyment of the Platform
+Reverse engineer or attempt to extract source code
+
+12.7 Consequences of Violations
+If you violate these Terms, we may take any or all of the following actions:
+
+Issue a warning
+Suspend your account temporarily
+Terminate your account permanently
+Forfeit any XP, rewards, achievements, or fee discounts
+Liquidate your positions and return funds (minus applicable fees and any damages)
+Report violations to regulatory authorities (FCA, National Crime Agency, police)
+Pursue legal action for damages, injunctive relief, and recovery of costs
+Ban you permanently from creating new accounts
+Cooperate with law enforcement investigations
+
+12.8 Reporting Violations
+If you become aware of violations of these Terms by other users, please report them to:
+Email: [abuse@groequity.com]
+Subject: Terms Violation Report
+Include details of the violation, supporting evidence, and your contact information.
+
+13. DISCLAIMERS AND LIMITATIONS OF LIABILITY
+13.1 Investment Risk Disclaimer
+IMPORTANT - PLEASE READ CAREFULLY:
+INVESTING INVOLVES SUBSTANTIAL RISK OF LOSS. YOU COULD LOSE SOME OR ALL OF YOUR INVESTED CAPITAL.
+
+Past performance does not guarantee future results
+Projections, forecasts, and estimates are not guarantees
+Market conditions can change rapidly and unpredictably
+AI recommendations are based on algorithms and historical data that may contain errors, biases, or limitations
+Diversification does not eliminate risk
+You may not achieve your stated financial goals within your desired timeframe (or at all)
+Early withdrawal may result in losses due to market conditions or liquidation costs
+Tax implications may reduce your net returns
+
+You acknowledge that you understand these risks and accept full responsibility for all investment decisions made through the Platform.
+13.2 No Guaranteed Returns
+We make no guarantees, warranties, or representations about:
+
+Investment performance or returns
+Achievement of financial goals or target dates
+AI recommendation accuracy or suitability
+Market forecasts, projections, or predictions
+Portfolio performance relative to benchmarks or other investors
+Suitability of investments for your specific circumstances
+
+All investment results depend on market performance and other factors beyond our control.
+13.3 Platform Availability and Performance
+We strive for high Platform availability but do not guarantee:
+
+Uninterrupted or error-free access (maintenance, outages, technical issues may occur)
+Real-time data accuracy (market data may be delayed)
+Availability during periods of extreme market volatility or high traffic
+Compatibility with all devices or operating systems
+Performance of third-party integrations
+
+We are not liable for losses caused by Platform unavailability, delays, or technical issues.
+13.4 Third-Party Services and Dependencies
+We rely on third-party providers (external broker, payment processors, data vendors, AI services, Just One Tree, cloud infrastructure). We are not responsible for:
+
+Third-party service failures, errors, delays, or outages
+External broker execution quality, timing, or pricing
+Data provider inaccuracies or delays
+Banking system issues or payment processing failures
+Internet or telecommunications outages
+AI service limitations or errors (including OpenAI)
+Tree planting delays or issues caused by Just One Tree
+Cloud infrastructure failures or security breaches
+
+Your relationship with third-party providers is governed by their respective terms and conditions.
+13.5 AI and Algorithm Limitations
+Our AI services are sophisticated but not infallible:
+
+AI recommendations may contain errors, biases, or limitations
+Algorithms are based on historical data that may not predict future market conditions
+Natural language processing may misinterpret your goals or inputs
+AI models are updated periodically and performance may vary over time
+Unusual or unprecedented market conditions may exceed AI training data and capabilities
+AI cannot account for all personal circumstances or future life changes
+
+We do not guarantee AI accuracy, completeness, or suitability for your individual needs.
+13.6 Goal Training Educational Content
+Goal Training content is for general educational purposes only:
+
+Not personalized financial, tax, or legal advice
+May become outdated as laws and markets change
+Should not be relied upon as the sole basis for financial decisions
+Does not guarantee improved investment outcomes or financial literacy
+
+Always consult qualified professionals for personalized advice.
+13.7 Tree Planting Program Disclaimer
+The Tree Planting Program is subject to:
+
+Just One Tree's ability to fulfill planting commitments
+Environmental factors affecting tree survival and growth
+CO₂ offset calculations are estimates, not guarantees
+Planting location and timing determined by Just One Tree
+Program may be modified or discontinued (with notice)
+
+We are not liable for tree planting delays, failures, or lower-than-expected environmental impact.
+13.8 "AS IS" and "AS AVAILABLE" Basis
+THE PLATFORM AND ALL SERVICES ARE PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO:
+
+Warranties of merchantability
+Fitness for a particular purpose
+Non-infringement
+Accuracy, reliability, or completeness
+Security or freedom from viruses
+Uninterrupted or error-free operation
+
+TO THE MAXIMUM EXTENT PERMITTED BY LAW, WE DISCLAIM ALL WARRANTIES.
+13.9 Limitation of Liability
+TO THE MAXIMUM EXTENT PERMITTED BY LAW:
+Gro Equity Ltd, its directors, officers, employees, agents, affiliates, and partners are NOT liable for:
+Investment Losses:
+
+Loss of capital, profits, or investment returns
+Failure to achieve financial goals
+Underperformance relative to benchmarks or expectations
+
+Indirect and Consequential Damages:
+
+Indirect, incidental, special, consequential, or punitive damages
+Lost profits, revenue, business, opportunities, or goodwill
+Data loss, corruption, or breach
+Cost of substitute services
+
+Third-Party Actions:
+
+Actions or omissions of external broker, banks, payment processors, data providers, AI services, or Just One Tree
+Third-party security breaches or data theft
+
+Platform Issues:
+
+Unauthorized account access due to your failure to maintain security
+Platform unavailability, downtime, errors, or bugs
+Loss of data or content
+Inaccurate market data or delayed information
+
+Force Majeure:
+
+Natural disasters, pandemics, acts of God
+War, terrorism, civil unrest, or political instability
+Government actions, regulatory changes, or sanctions
+Internet, telecommunications, or infrastructure failures
+Power outages or equipment failures
+Market closures, trading halts, or circuit breakers
+Any event beyond our reasonable control
+
+13.10 Maximum Liability Cap
+Our total aggregate liability to you for all claims arising from or related to these Terms or your use of the Platform shall not exceed the greater of:
+
+The total fees you paid to Gro Equity Ltd in the 12 months preceding the claim, OR
+£100 (one hundred pounds sterling)
+
+This limitation applies regardless of the legal theory (contract, tort, negligence, strict liability, or otherwise) and even if we have been advised of the possibility of such damages.
+13.11 Exclusions and Statutory Rights
+Nothing in these Terms excludes or limits our liability for:
+
+Death or personal injury caused by our negligence
+Fraud or fraudulent misrepresentation
+Breach of statutory rights that cannot be lawfully excluded
+Any other liability that cannot be lawfully excluded or limited under UK law
+
+These Terms do not affect your statutory rights as a consumer under UK law.
+13.12 Time Limitation for Claims
+Any claim arising from these Terms or your use of the Platform must be brought within one (1) year from the date the claim arose. After this period, the claim is permanently barred.
+13.13 Basis of Bargain
+You acknowledge that the disclaimers and limitations in this Section 13 are fundamental elements of the agreement between you and Gro Equity Ltd, and that we would not provide the Platform or services without these limitations.
+
+14. INDEMNIFICATION
+14.1 Your Indemnification Obligations
+You agree to indemnify, defend, and hold harmless Gro Equity Ltd, its directors, officers, employees, agents, affiliates, partners, and service providers from and against any and all claims, liabilities, damages, losses, costs, expenses, and fees (including reasonable attorneys' fees) arising from or related to:
+
+Your use or misuse of the Platform
+Your violation of these Terms
+Your violation of any laws, regulations, or third-party rights
+Your investment decisions and any resulting losses
+Content you submit to the Platform
+Your breach of representations or warranties
+Unauthorized access to your account due to your failure to maintain security
+Claims by other users or third parties related to your conduct
+Market abuse, insider trading, or other illegal trading activity
+Fraud, misrepresentation, or provision of false information
+
+14.2 Indemnification Process
+If we seek indemnification from you:
+
+We will provide prompt written notice of the claim
+You will have the right to control the defense with counsel of your choice (subject to our approval)
+We may participate in the defense at our own expense
+You will not settle any claim without our prior written consent
+You will cooperate fully with the defense
+
+14.3 Our Right to Defend
+We reserve the right, at our own expense, to assume exclusive defense and control of any matter subject to indemnification by you. In such case, you agree to cooperate with our defense.
+
+15. DISPUTE RESOLUTION
+15.1 Governing Law
+These Terms and any disputes arising from or related to the Platform shall be governed by and construed in accordance with the laws of England and Wales, without regard to conflict of law principles.
+15.2 Jurisdiction
+Subject to the arbitration provisions below, you irrevocably agree that the courts of England and Wales shall have exclusive jurisdiction to settle any dispute or claim arising out of or in connection with these Terms or your use of the Platform.
+15.3 Informal Dispute Resolution
+Before initiating formal legal proceedings or arbitration, you agree to first attempt to resolve any dispute informally by contacting us at:
+Email: [disputes@groequity.com]
+Address: [Address]
+Provide a detailed description of the dispute and your proposed resolution. We will attempt to resolve the dispute within 30 days. If we cannot reach a resolution, either party may proceed to arbitration or court.
+15.4 Arbitration (Optional)
+[Include if you want to offer arbitration as an option]
+For disputes exceeding £[amount], either party may elect to resolve the dispute through binding arbitration administered by [Arbitration Service, e.g., London Court of International Arbitration]:
+
+Arbitration will be conducted in English in London
+The arbitrator's decision will be final and binding
+Each party bears its own costs unless the arbitrator decides otherwise
+Arbitration does not preclude seeking emergency injunctive relief in court
+
+15.5 Class Action Waiver
+TO THE EXTENT PERMITTED BY LAW, YOU AGREE THAT:
+
+All disputes will be resolved on an individual basis
+You waive the right to participate in class actions, class arbitrations, or representative proceedings
+You may only seek relief (including monetary, injunctive, or declaratory relief) on an individual basis
+
+15.6 Small Claims Court
+Notwithstanding the above, either party may bring an individual action in small claims court for disputes within that court's jurisdiction.
+15.7 Injunctive Relief
+Nothing in these dispute resolution provisions prevents either party from seeking emergency injunctive or equitable relief from a court to prevent irreparable harm pending resolution of the dispute.
+15.8 Time Limitation on Claims
+Except where prohibited by law, any claim or cause of action arising out of or related to your use of the Platform or these Terms must be filed within one (1) year after the claim or cause of action arose, or be permanently barred.
+
+16. TERMINATION
+16.1 Termination by You
+You may terminate your account at any time by:
+
+Withdrawing all funds from your account
+Contacting customer support at [support@groequity.com] to request account closure
+Following the account closure process in the Platform settings
+
+Upon termination:
+
+We will liquidate all positions and return funds to your registered bank account
+Pending trades must settle before funds can be withdrawn
+You will receive final account statements and tax documents
+You remain responsible for any outstanding fees or obligations
+
+16.2 Termination by Us
+We may suspend or terminate your account immediately, with or without notice, if:
+
+You breach these Terms or our policies
+We suspect fraudulent, illegal, or harmful activity
+Required by law, court order, or regulatory authority
+You fail identity verification or AML checks
+Your account has been dormant for more than 36 months
+We discontinue the Platform or services (with reasonable notice)
+We reasonably believe termination is necessary to protect Gro, other users, or third parties
+
+16.3 Effects of Termination
+Upon termination or suspension:
+
+Your right to access and use the Platform immediately ceases
+We will liquidate your positions (unless legally prohibited)
+Funds will be returned to your registered bank account after settlement
+You forfeit all XP, achievements, rewards, and fee discounts
+You remain liable for all obligations incurred before termination
+Provisions intended to survive termination will continue to apply
+
+16.4 Survival of Terms
+The following sections survive termination:
+
+Section 6 (Fees and Charges) - for fees owed
+Section 10 (Data Protection and Privacy) - for data retention obligations
+Section 11 (Intellectual Property)
+Section 13 (Disclaimers and Limitations of Liability)
+Section 14 (Indemnification)
+Section 15 (Dispute Resolution)
+Section 16.4 (Survival)
+Section 17 (General Provisions)
+
+16.5 No Liability for Termination
+We are not liable to you or any third party for termination or suspension of your account in accordance with these Terms.
+
+17. GENERAL PROVISIONS
+17.1 Entire Agreement
+These Terms, together with our Privacy Policy and Cookie Policy, constitute the entire agreement between you and Gro Equity Ltd regarding your use of the Platform and supersede all prior agreements, understandings, and communications, whether oral or written.
+17.2 Amendments
+We may amend these Terms at any time. Material changes will be notified via:
+
+Email to your registered email address
+In-app notification
+Prominent notice on the Platform
+
+Changes will take effect 30 days after notification (or immediately for legal/regulatory requirements). Your continued use after the effective date constitutes acceptance. If you disagree with changes, you may terminate your account without penalty before the effective date.
+17.3 Assignment
+You may not assign, transfer, or delegate these Terms or your account to any third party without our prior written consent.
+We may assign these Terms and our rights and obligations to:
+
+An affiliate or subsidiary
+A successor in interest through merger, acquisition, or sale
+Any third party with your consent or as permitted by law
+
+17.4 Severability
+If any provision of these Terms is found to be invalid, illegal, or unenforceable by a court of competent jurisdiction:
+
+That provision will be modified to the minimum extent necessary to make it valid and enforceable
+If modification is not possible, the provision will be severed
+The remaining provisions will remain in full force and effect
+
+17.5 Waiver
+Our failure or delay in exercising any right, power, or remedy under these Terms does not constitute a waiver of that right. Any waiver must be in writing and signed by an authorized representative of Gro Equity Ltd.
+A waiver of any breach does not constitute a waiver of any subsequent breach.
+17.6 No Third-Party Beneficiaries
+These Terms are for the benefit of you and Gro Equity Ltd only. No third party has any right to enforce any provision of these Terms except as expressly stated (e.g., indemnified parties under Section 14).
+17.7 Force Majeure
+We are not liable for any failure or delay in performance due to events beyond our reasonable control, including:
+
+Natural disasters, pandemics, acts of God
+War, terrorism, civil unrest
+Government actions, embargoes, sanctions
+Internet or telecommunications failures
+Power outages or equipment failures
+Labor disputes or strikes
+Failures of third-party service providers
+Market closures or trading halts
+
+During force majeure events, our obligations are suspended. We will use reasonable efforts to resume performance.
+17.8 Relationship of the Parties
+Nothing in these Terms creates a partnership, joint venture, employment, or agency relationship between you and Gro Equity Ltd. You are not authorized to make commitments on our behalf.
+17.9 Notices
+Notices to You:
+We may provide notices via:
+
+Email to your registered email address
+In-app notifications
+Postal mail to your registered address
+Prominent posting on the Platform
+
+Notices are effective when sent (email/in-app) or three days after mailing (postal).
+Notices to Us:
+You may contact us at:
+
+Email: [legal@groequity.com]
+Address: Gro Equity Ltd, [Address]
+
+Legal notices must be sent in writing to the legal email or postal address.
+17.10 Language
+These Terms are drafted in English. Any translation is for convenience only. In case of conflict, the English version prevails.
+17.11 Electronic Communications
+You consent to receive communications from us electronically, including:
+
+Account statements and confirmations
+Tax documents
+Regulatory disclosures
+Marketing communications (if you opt in)
+
+Electronic communications satisfy any legal requirement for written communication.
+You may withdraw consent by contacting us, but this may require account closure as electronic delivery is integral to our service.
+17.12 Headings
+Section headings are for convenience only and do not affect interpretation of these Terms.
+17.13 Interpretation
+In these Terms:
+
+"Including" means "including but not limited to"
+Singular includes plural and vice versa
+"You" and "your" refer to the account holder
+"We," "us," and "our" refer to Gro Equity Ltd
+
+17.14 Contact Information
+For questions about these Terms:
+General Inquiries:
+Email: [support@groequity.com]
+Phone: [Phone Number]
+Address: Gro Equity Ltd, [Address]
+Legal Matters:
+Email: [legal@groequity.com]
+Address: Gro Equity Ltd, [Address]
+Data Protection:
+Email: [privacy@groequity.com]
+Address: [Address]
+Complaints:
+Email: [complaints@groequity.com]
+Address: [Address]
+17.15 Complaints Procedure
+If you have a complaint:
+
+Contact us at [complaints@groequity.com] with full details
+We will acknowledge your complaint within 3 business days
+We will investigate and respond within 8 weeks
+If you are not satisfied, you may refer the matter to the Financial Ombudsman Service:
+
+Website: www.financial-ombudsman.org.uk
+Phone: 0800 023 4567
+Address: Financial Ombudsman Service, Exchange Tower, London E14 9SR
+
+
+
+17.16 Financial Services Compensation Scheme (FSCS)
+[To be completed once external broker is selected]
+Depending on the circumstances of your claim, you may be entitled to compensation from the Financial Services Compensation Scheme (FSCS) if Gro Equity Ltd or our external broker cannot meet our obligations. Details available at www.fscs.org.uk or by calling 0800 678 1100.
+17.17 Regulatory Information
+Gro Equity Ltd is registered in England and Wales under company number 16762013.
+Registered office: [Address]
+We are in the process of obtaining FCA authorization. Current status and updates available at [website/regulatory].
+
+18. ACCEPTANCE OF TERMS
+By creating an account, accessing, or using the Gro Platform, you acknowledge that:
+
+You have read and understood these Terms and Conditions
+You have read and understood our Privacy Policy and Cookie Policy
+You agree to be bound by all provisions
+You meet all eligibility requirements
+All information you provide is accurate and complete
+You accept all risks associated with investing
+You understand this is a legally binding agreement
+
+If you do not agree to these Terms, you must not use the Platform.
+
+Last Updated: [Date]
+Effective Date: [Date]
+Version: 1.0

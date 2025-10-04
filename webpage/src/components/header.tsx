@@ -17,6 +17,8 @@ const Header = () => {
     // Handle scroll effect
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
+      // Close policies dropdown when scrolling
+      setIsPoliciesOpen(false);
     };
 
     // Handle mobile detection
@@ -24,13 +26,24 @@ const Header = () => {
       setIsMobile(window.innerWidth < 768);
     };
 
+    // Close dropdown when clicking anywhere on the document
+    const handleDocumentClick = (event: MouseEvent) => {
+      const target = event.target as Element;
+      // Check if the click is outside the policies dropdown area
+      if (!target.closest('[data-policies-dropdown]')) {
+        setIsPoliciesOpen(false);
+      }
+    };
+
     handleResize();
     window.addEventListener('scroll', handleScroll);
     window.addEventListener('resize', handleResize);
+    document.addEventListener('click', handleDocumentClick);
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
       window.removeEventListener('resize', handleResize);
+      document.removeEventListener('click', handleDocumentClick);
     };
   }, []);
 
@@ -48,11 +61,11 @@ const Header = () => {
   };
 
   const policyItems = [
-    { name: 'Terms & Conditions', href: '/policies/terms' },
-    { name: 'Privacy Policy', href: '/policies/privacy' },
-    { name: 'Cookie Policy', href: '/policies/cookies' },
-    { name: 'Financial Conduct', href: '/policies/financial-conduct' },
-    { name: 'AI & Data', href: '/policies/ai-data' },
+    { name: 'Terms & Conditions', href: '/policy/terms' },
+    { name: 'Privacy Policy', href: '/policy/privacy' },
+    { name: 'Cookie Policy', href: '/policy/cookies' },
+    { name: 'Financial Conduct', href: '/policy/financial-conduct' },
+    { name: 'AI & Data', href: '/policy/ai-data' },
   ];
 
   // Helper function to check if link is active
@@ -106,6 +119,7 @@ const Header = () => {
             <Link 
               href="/" 
               className={getNavLinkClasses('/', 'font-medium transition-colors duration-200 relative group')}
+              onClick={() => setIsPoliciesOpen(false)}
             >
               Home
               <span className={`absolute -bottom-1 left-0 h-0.5 bg-emerald-500 transition-all duration-300 ${
@@ -115,6 +129,7 @@ const Header = () => {
             <Link 
               href="/product" 
               className={getNavLinkClasses('/product', 'font-medium transition-colors duration-200 relative group')}
+              onClick={() => setIsPoliciesOpen(false)}
             >
               Product
               <span className={`absolute -bottom-1 left-0 h-0.5 bg-emerald-500 transition-all duration-300 ${
@@ -124,6 +139,7 @@ const Header = () => {
             <Link 
               href="/about" 
               className={getNavLinkClasses('/about', 'font-medium transition-colors duration-200 relative group')}
+              onClick={() => setIsPoliciesOpen(false)}
             >
               About
               <span className={`absolute -bottom-1 left-0 h-0.5 bg-emerald-500 transition-all duration-300 ${
@@ -132,11 +148,11 @@ const Header = () => {
             </Link>
             
             {/* Policies Dropdown */}
-            <div className="relative">
+            <div className="relative" data-policies-dropdown>
               <button
                 onClick={togglePolicies}
                 className={`flex items-center space-x-1 font-medium transition-colors duration-200 relative group ${
-                  pathname.startsWith('/policies') ? 'text-emerald-600' : 'text-gray-700 hover:text-emerald-600'
+                  pathname.startsWith('/policy') ? 'text-emerald-600' : 'text-gray-700 hover:text-emerald-600'
                 }`}
               >
                 <span>Policies</span>
@@ -147,7 +163,7 @@ const Header = () => {
                   <ChevronDownIcon className="h-4 w-4" />
                 </motion.div>
                 <span className={`absolute -bottom-1 left-0 h-0.5 bg-emerald-500 transition-all duration-300 ${
-                  pathname.startsWith('/policies') ? 'w-full' : 'w-0 group-hover:w-full'
+                  pathname.startsWith('/policy') ? 'w-full' : 'w-0 group-hover:w-full'
                 }`}></span>
               </button>
 
@@ -159,7 +175,8 @@ const Header = () => {
                     animate={{ opacity: 1, y: 0, scale: 1 }}
                     exit={{ opacity: 0, y: -10, scale: 0.95 }}
                     transition={{ duration: 0.2, ease: [0.4, 0, 0.2, 1] }}
-                    className="absolute top-full left-0 mt-2 w-56 bg-white/95 backdrop-blur-md rounded-xl shadow-xl border border-emerald-100/50 py-2"
+                    className="absolute top-full left-0 mt-2 w-56 bg-white/95 backdrop-blur-md rounded-xl shadow-xl border border-emerald-100/50 py-2 z-50"
+                    data-policies-dropdown
                   >
                     {policyItems.map((item, index) => (
                       <Link
@@ -189,6 +206,7 @@ const Header = () => {
               <Link 
                 href="/waitlist" 
                 className="inline-flex items-center rounded-xl bg-emerald-500 px-4 py-2 text-sm font-semibold text-white shadow-lg hover:bg-emerald-600 transition-all duration-200 hover:shadow-xl"
+                onClick={() => setIsPoliciesOpen(false)}
               >
                 Join Waitlist
               </Link>
@@ -286,7 +304,7 @@ const Header = () => {
                     <button
                       onClick={togglePolicies}
                       className={`flex items-center justify-between w-full text-lg font-medium transition-colors duration-200 py-2 ${
-                        pathname.startsWith('/policies') ? 'text-emerald-600' : 'text-gray-700 hover:text-emerald-600'
+                        pathname.startsWith('/policy') ? 'text-emerald-600' : 'text-gray-700 hover:text-emerald-600'
                       }`}
                     >
                       <span>Policies</span>
@@ -343,14 +361,6 @@ const Header = () => {
           </>
         )}
       </AnimatePresence>
-
-      {/* Click outside to close policies dropdown */}
-      {isPoliciesOpen && (
-        <div 
-          className="fixed inset-0 z-30 hidden md:block" 
-          onClick={() => setIsPoliciesOpen(false)}
-        />
-      )}
     </header>
   );
 };

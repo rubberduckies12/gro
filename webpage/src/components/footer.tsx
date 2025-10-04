@@ -7,11 +7,11 @@ const Footer = () => {
   const pathname = usePathname();
 
   const policyItems = [
-    { name: 'Terms & Conditions', href: '/policies/terms' },
-    { name: 'Privacy Policy', href: '/policies/privacy' },
-    { name: 'Cookie Policy', href: '/policies/cookies' },
-    { name: 'Financial Conduct', href: '/policies/financial-conduct' },
-    { name: 'AI & Data', href: '/policies/ai-data' },
+    { name: 'Terms & Conditions', href: '/policy/terms' },
+    { name: 'Privacy Policy', href: '/policy/privacy' },
+    { name: 'Cookie Policy', href: '/policy/cookies' },
+    { name: 'Financial Conduct', href: '/policy/financial-conduct' },
+    { name: 'AI & Data', href: '/policy/ai-data' },
   ];
 
   const navigationItems = [
