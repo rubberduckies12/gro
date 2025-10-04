@@ -45,7 +45,7 @@ const Terms = () => {
                   <div>
                     <h4 className="text-lg sm:text-xl font-semibold text-black mb-3">1.1 About These Terms</h4>
                     <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
-                      These Terms and Conditions ("Terms") govern your use of the Gro mobile application and web platform (collectively, the "Platform") operated by Gro Equity Ltd ("Gro," "we," "us," or "our"), a company registered in England and Wales under company number 16762013, with registered office at [Address].
+                      These Terms and Conditions ("Terms") govern your use of the Gro mobile application and web platform (collectively, the "Platform") operated by Gro Equity Ltd ("Gro," "we," "us," or "our"), a company registered in England and Wales under company number 16762013, with registered office at Abbey Farm Church Street, Higham, Rochester, England, ME3 7LS.
                     </p>
                   </div>
 
