@@ -1,6 +1,7 @@
 'use client';
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { ShieldCheckIcon, ChartBarIcon, ArrowTrendingUpIcon, SparklesIcon } from '@heroicons/react/24/solid';
 import { motion, Variants, useReducedMotion } from 'framer-motion';
 import Header from '../../components/header';
@@ -186,14 +187,16 @@ const Home = () => {
               variants={fadeInUp}
               className="flex flex-col items-center justify-center mb-8 sm:mb-10 px-2"
             >
-              <motion.div
-                animate={noAnimation ? {} : { scale: [1, 1.05, 1] }}
-                transition={noAnimation ? {} : { duration: 2, repeat: Infinity }}
-                className="inline-flex items-center rounded-2xl bg-emerald-500 px-5 sm:px-7 lg:px-9 py-3 sm:py-4 lg:py-5 text-sm sm:text-base lg:text-lg font-semibold text-white shadow-2xl mb-3 sm:mb-4"
-              >
-                <SparklesIcon className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 mr-2 sm:mr-3" />
-                <span>We&apos;re still Gro-ing - launching soon!</span>
-              </motion.div>
+              <Link href="/waitlist/joinWaitlist">
+                <motion.div
+                  animate={noAnimation ? {} : { scale: [1, 1.05, 1] }}
+                  transition={noAnimation ? {} : { duration: 2, repeat: Infinity }}
+                  className="inline-flex items-center rounded-2xl bg-emerald-500 hover:bg-emerald-600 px-5 sm:px-7 lg:px-9 py-3 sm:py-4 lg:py-5 text-sm sm:text-base lg:text-lg font-semibold text-white shadow-2xl mb-3 sm:mb-4 cursor-pointer transition-colors duration-200"
+                >
+                  <SparklesIcon className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 mr-2 sm:mr-3" />
+                  <span>We&apos;re still Gro-ing - Join the waitlist!</span>
+                </motion.div>
+              </Link>
               <p className="text-gray-600 text-sm sm:text-base lg:text-lg text-center">
                 What If Money Did Gro On Trees?
               </p>
@@ -422,10 +425,12 @@ const Home = () => {
             variants={fadeInUp}
             className="flex justify-center px-2"
           >
-            <div className="inline-flex items-center rounded-2xl bg-white text-emerald-500 px-6 sm:px-8 lg:px-10 py-3 sm:py-4 lg:py-5 text-base sm:text-lg lg:text-xl font-bold shadow-2xl">
-              <SparklesIcon className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 mr-2 sm:mr-3" />
-              <span>We&apos;re still Gro-ing - launching soon!</span>
-            </div>
+            <Link href="/waitlist/joinWaitlist">
+              <div className="inline-flex items-center rounded-2xl bg-white text-emerald-500 hover:bg-gray-50 px-6 sm:px-8 lg:px-10 py-3 sm:py-4 lg:py-5 text-base sm:text-lg lg:text-xl font-bold shadow-2xl cursor-pointer transition-colors duration-200">
+                <SparklesIcon className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 mr-2 sm:mr-3" />
+                <span>We&apos;re still Gro-ing - Join the waitlist!</span>
+              </div>
+            </Link>
           </motion.div>
         </div>
       </motion.section>
