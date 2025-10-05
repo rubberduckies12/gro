@@ -46,7 +46,8 @@ app.get('/health', (req, res) => {
     success: true,
     message: 'Server is running',
     timestamp: new Date().toISOString(),
-    environment: process.env.NODE_ENV || 'development'
+    environment: process.env.NODE_ENV || 'development',
+    port: process.env.PORT || '5001'
   });
 });
 
@@ -99,8 +100,8 @@ app.use((error, req, res, next) => {
   });
 });
 
-// Start server on port 5001
-const PORT = 5001;
+// Start server - USE RENDER'S PORT OR DEFAULT TO 5001
+const PORT = process.env.PORT || 5001;
 const server = app.listen(PORT, () => {
   console.log(`🚀 Server running on port ${PORT}`);
   console.log(`📍 Environment: ${process.env.NODE_ENV || 'development'}`);
