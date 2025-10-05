@@ -74,7 +74,7 @@ const Terms = () => {
                         <h5 className="text-base sm:text-lg font-semibold text-black mb-3">Current Status:</h5>
                         <ul className="space-y-2 text-base sm:text-lg text-gray-700">
                           <li>• Company registered in England and Wales under company number 16762013</li>
-                          <li>• Registered office at [Address]</li>
+                          <li>• Registered office at Abbey Farm Church Street, Higham, Rochester, England, ME3 7LS</li>
                           <li>• Operating under FCA regulatory guidance for pre-authorized firms</li>
                           <li>• Building systems and processes to meet full FCA authorization requirements</li>
                         </ul>
@@ -1042,8 +1042,7 @@ const Terms = () => {
                         <h5 className="text-base sm:text-lg font-semibold text-black mb-2">Data Protection Officer:</h5>
                         <ul className="space-y-1 text-base sm:text-lg text-gray-700 ml-4">
                           <li>• Email: privacy@groequity.com</li>
-                          <li>• Address: [Address]</li>
-                          <li>• Phone: [Phone Number]</li>
+                          <li>• Address: Abbey Farm Church Street, Higham, Rochester, England, ME3 7LS</li>
                         </ul>
                       </div>
 
@@ -1158,7 +1157,7 @@ const Terms = () => {
                       <h5 className="text-base sm:text-lg font-semibold text-black mb-3">Copyright Agent Contact:</h5>
                       <ul className="space-y-2 text-base sm:text-lg text-gray-700">
                         <li>• Email: copyright@groequity.com</li>
-                        <li>• Address: [Address]</li>
+                        <li>• Address: Abbey Farm Church Street, Higham, Rochester, England, ME3 7LS</li>
                       </ul>
                       <p className="text-base sm:text-lg text-gray-700 leading-relaxed mt-3">
                         We will investigate and remove infringing content as appropriate. We may terminate accounts of users who repeatedly infringe intellectual property rights.
@@ -1601,7 +1600,7 @@ const Terms = () => {
                     <div className="bg-blue-50 rounded-2xl p-4 sm:p-6 mb-4">
                       <ul className="space-y-2 text-base sm:text-lg text-gray-700">
                         <li>• Email: disputes@groequity.com</li>
-                        <li>• Address: [Address]</li>
+                        <li>• Address: Abbey Farm Church Street, Higham, Rochester, England, ME3 7LS</li>
                       </ul>
                     </div>
                     
@@ -1853,7 +1852,7 @@ const Terms = () => {
                         <p className="text-base sm:text-lg text-gray-700 leading-relaxed mb-2">You may contact us at:</p>
                         <ul className="space-y-1 text-base sm:text-lg text-gray-700 ml-4 mb-3">
                           <li>• Email: legal@groequity.com</li>
-                          <li>• Address: Gro Equity Ltd, [Address]</li>
+                          <li>• Address: Gro Equity Ltd, Abbey Farm Church Street, Higham, Rochester, England, ME3 7LS</li>
                         </ul>
                         <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
                           Legal notices must be sent in writing to the legal email or postal address.
@@ -1976,7 +1975,7 @@ const Terms = () => {
                     <div className="bg-blue-50 rounded-2xl p-4 sm:p-6">
                       <ul className="space-y-2 text-base sm:text-lg text-gray-700">
                         <li>• Gro Equity Ltd is registered in England and Wales under company number 16762013</li>
-                        <li>• Registered office: [Address]</li>
+                        <li>• Registered office: Abbey Farm Church Street, Higham, Rochester, England, ME3 7LS</li>
                         <li>• We are in the process of obtaining FCA authorization</li>
                         <li>• Current status and updates available at [website/regulatory]</li>
                       </ul>
