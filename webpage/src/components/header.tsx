@@ -207,7 +207,7 @@ const Header = () => {
               </AnimatePresence>
             </div>
             
-            {/* CTA Button */}
+            {/* CTA Button - UPDATED to use pathname.push instead of window.location */}
             <motion.div
               whileHover={isMobile ? {} : { scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -379,7 +379,7 @@ const Header = () => {
                     </AnimatePresence>
                   </div>
                   
-                  {/* Mobile CTA */}
+                  {/* Mobile CTA - UPDATED to use Link instead of window.location */}
                   <div className="pt-4 border-t border-gray-200">
                     <Link 
                       href="/waitlist" 
