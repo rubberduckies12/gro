@@ -10,8 +10,8 @@ const Footer = () => {
     { name: 'Terms & Conditions', href: '/policy/terms' },
     { name: 'Privacy Policy', href: '/policy/privacy' },
     { name: 'Cookie Policy', href: '/policy/cookies' },
-    { name: 'Financial Conduct', href: '/policy/financial-conduct' },
-    { name: 'AI & Data', href: '/policy/ai-data' },
+    { name: 'Financial Conduct', href: '/policy/CoC/finance' },
+    { name: 'AI & Data', href: '/policy/CoC/Ai&Data' },
   ];
 
   const navigationItems = [
