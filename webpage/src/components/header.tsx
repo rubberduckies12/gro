@@ -29,8 +29,12 @@ const Header = () => {
     // Close dropdown when clicking anywhere on the document
     const handleDocumentClick = (event: MouseEvent) => {
       const target = event.target as Element;
-      // Check if the click is outside the policies dropdown area
-      if (!target.closest('[data-policies-dropdown]')) {
+      // Only close if clicking outside the entire policies dropdown area
+      const policiesDropdown = target.closest('[data-policies-dropdown]');
+      const isClickOnDropdownItem = target.closest('a[href^="/policy"]');
+      
+      // Don't close if clicking on dropdown items or dropdown area
+      if (!policiesDropdown && !isClickOnDropdownItem) {
         setIsPoliciesOpen(false);
       }
     };
@@ -58,6 +62,10 @@ const Header = () => {
 
   const togglePolicies = () => {
     setIsPoliciesOpen(!isPoliciesOpen);
+  };
+
+  const handlePolicyClick = () => {
+    setIsPoliciesOpen(false);
   };
 
   const policyItems = [
@@ -151,7 +159,7 @@ const Header = () => {
             <div className="relative" data-policies-dropdown>
               <button
                 onClick={togglePolicies}
-                className={`flex items-center space-x-1 font-medium transition-colors duration-200 relative group ${
+                className={`flex items-center space-x-1 font-medium transition-colors duration-200 relative group cursor-pointer ${
                   pathname.startsWith('/policy') ? 'text-emerald-600' : 'text-gray-700 hover:text-emerald-600'
                 }`}
               >
@@ -182,8 +190,8 @@ const Header = () => {
                       <Link
                         key={item.href}
                         href={item.href}
-                        onClick={() => setIsPoliciesOpen(false)}
-                        className={`block px-4 py-2 text-sm transition-colors duration-200 ${
+                        onClick={handlePolicyClick}
+                        className={`block px-4 py-2 text-sm transition-colors duration-200 cursor-pointer ${
                           pathname === item.href 
                             ? 'text-emerald-600 bg-emerald-50/50' 
                             : 'text-gray-700 hover:text-emerald-600 hover:bg-emerald-50/50'
@@ -303,7 +311,7 @@ const Header = () => {
                   <div>
                     <button
                       onClick={togglePolicies}
-                      className={`flex items-center justify-between w-full text-lg font-medium transition-colors duration-200 py-2 ${
+                      className={`flex items-center justify-between w-full text-lg font-medium transition-colors duration-200 py-2 cursor-pointer ${
                         pathname.startsWith('/policy') ? 'text-emerald-600' : 'text-gray-700 hover:text-emerald-600'
                       }`}
                     >
