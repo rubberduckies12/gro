@@ -9,26 +9,56 @@ const connectDB = async () => {
     }
 
     // MongoDB connection string from environment variables
-    const mongoURI = process.env.MONGODB_URI || process.env.MONGO_URI || 'mongodb://localhost:27017/gro-waitlist';
+    const mongoURI = process.env.MONGODB_URI;
 
-    // Connection options - FIXED: Removed unsupported options
+    // Check if MONGODB_URI is defined - FIXED: Safe handling
+    if (!mongoURI) {
+      console.error('❌ MONGODB_URI environment variable is not defined');
+      console.log('🔍 Available environment variables:', Object.keys(process.env).filter(key => key.includes('MONGO')));
+      throw new Error('MONGODB_URI environment variable is not defined. Please set it in your deployment environment.');
+    }
+
+    // Connection options
     const options = {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-      maxPoolSize: 10, // Maintain up to 10 socket connections
-      serverSelectionTimeoutMS: 5000, // Keep trying to send operations for 5 seconds
-      socketTimeoutMS: 45000, // Close sockets after 45 seconds of inactivity
-      // Removed: bufferCommands and bufferMaxEntries are not valid options
+      maxPoolSize: 10,
+      serverSelectionTimeoutMS: 10000,
+      socketTimeoutMS: 45000,
+      connectTimeoutMS: 10000,
+      family: 4,
+      retryWrites: true,
+      retryReads: true,
     };
 
-    // Connect to MongoDB
-    await mongoose.connect(mongoURI, options);
+    console.log('🔌 Attempting to connect to MongoDB Atlas...');
+    // Safe string replacement - FIXED: Check if mongoURI exists before calling replace
+    const maskedURI = mongoURI ? mongoURI.replace(/\/\/([^:]+):([^@]+)@/, '//***:***@') : 'undefined';
+    console.log('🔗 Connection string:', maskedURI);
+
+    // Connect to MongoDB with timeout
+    const connectWithTimeout = new Promise((resolve, reject) => {
+      const timeout = setTimeout(() => {
+        reject(new Error('Connection timeout after 15 seconds'));
+      }, 15000);
+
+      mongoose.connect(mongoURI, options)
+        .then(() => {
+          clearTimeout(timeout);
+          resolve();
+        })
+        .catch((err) => {
+          clearTimeout(timeout);
+          reject(err);
+        });
+    });
+
+    await connectWithTimeout;
 
     console.log('✅ MongoDB connected successfully');
+    console.log('📊 Connected to database:', mongoose.connection.db.databaseName);
 
     // Connection event listeners
     mongoose.connection.on('connected', () => {
-      console.log('📡 Mongoose connected to MongoDB');
+      console.log('📡 Mongoose connected to MongoDB Atlas');
     });
 
     mongoose.connection.on('error', (err) => {
@@ -36,7 +66,11 @@ const connectDB = async () => {
     });
 
     mongoose.connection.on('disconnected', () => {
-      console.log('📡 Mongoose disconnected from MongoDB');
+      console.log('📡 Mongoose disconnected from MongoDB Atlas');
+    });
+
+    mongoose.connection.on('reconnected', () => {
+      console.log('🔄 Mongoose reconnected to MongoDB Atlas');
     });
 
     // Handle app termination
@@ -49,8 +83,17 @@ const connectDB = async () => {
   } catch (error) {
     console.error('❌ MongoDB connection failed:', error.message);
     
-    // In production, you might want to exit the process
+    // Debug environment variables
+    console.log('🔍 Environment variables debug:');
+    console.log('NODE_ENV:', process.env.NODE_ENV);
+    console.log('PORT:', process.env.PORT);
+    console.log('MONGODB_URI defined:', !!process.env.MONGODB_URI);
+    
+    console.error('🔍 Full error details:', error);
+    
+    // Don't exit in development, but do in production
     if (process.env.NODE_ENV === 'production') {
+      console.log('💡 This is a production environment. Exiting...');
       process.exit(1);
     }
   }
