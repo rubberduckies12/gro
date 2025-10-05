@@ -59,7 +59,7 @@ const JoinWaitlist = () => {
     setError('');
 
     try {
-      const response = await fetch('http://localhost:5001/api/register-interest', {
+      const response = await fetch('https://gro-fpvi.onrender.com/api/register-interest', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -393,13 +393,6 @@ const JoinWaitlist = () => {
             )}
           </AnimatePresence>
         </motion.div>
-
-        {/* Footer */}
-        <div className="text-center mt-6">
-          <p className="text-sm text-gray-500">
-            Already joined? <a href="/waitlist/check" className="text-emerald-600 hover:text-emerald-700 font-medium">Check your position</a>
-          </p>
-        </div>
       </motion.div>
     </div>
   );
