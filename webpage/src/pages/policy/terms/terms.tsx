@@ -15,7 +15,7 @@ const Terms = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative px-4 sm:px-6 pt-6 sm:pt-8 lg:pt-20 pb-8 sm:pb-8 lg:pb-6 lg:px-8">
+      <section className="relative px-4 sm:px-6 pt-20 sm:pt-24 lg:pt-28 pb-8 sm:pb-8 lg:pb-6 lg:px-8">
         <div className="mx-auto max-w-4xl">
           <div className="text-center mb-12 sm:mb-16">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-black mb-6 sm:mb-8 leading-tight">

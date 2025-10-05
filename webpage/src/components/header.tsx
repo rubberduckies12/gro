@@ -60,7 +60,9 @@ const Header = () => {
     setIsPoliciesOpen(false);
   };
 
-  const togglePolicies = () => {
+  const togglePolicies = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
     setIsPoliciesOpen(!isPoliciesOpen);
   };
 
@@ -324,29 +326,53 @@ const Header = () => {
                       </motion.div>
                     </button>
                     
-                    {/* Mobile Policies Dropdown */}
+                    {/* Mobile Policies Dropdown - Fixed Animation */}
                     <AnimatePresence>
                       {isPoliciesOpen && (
                         <motion.div
-                          initial={{ opacity: 0, height: 0 }}
-                          animate={{ opacity: 1, height: 'auto' }}
-                          exit={{ opacity: 0, height: 0 }}
-                          transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1] }}
-                          className="ml-4 mt-2 space-y-3 border-l-2 border-emerald-100 pl-4"
+                          initial={{ opacity: 0, maxHeight: 0 }}
+                          animate={{ opacity: 1, maxHeight: 300 }}
+                          exit={{ opacity: 0, maxHeight: 0 }}
+                          transition={{ 
+                            duration: 0.3, 
+                            ease: [0.4, 0, 0.2, 1],
+                            opacity: { duration: 0.2 },
+                            maxHeight: { duration: 0.3 }
+                          }}
+                          className="overflow-hidden ml-4 mt-2 space-y-3 border-l-2 border-emerald-100 pl-4"
                         >
-                          {policyItems.map((item) => (
-                            <Link
+                          {policyItems.map((item, index) => (
+                            <motion.div
                               key={item.href}
-                              href={item.href}
-                              onClick={closeMenu}
-                              className={`block text-base transition-colors duration-200 py-1 ${
-                                pathname === item.href 
-                                  ? 'text-emerald-600' 
-                                  : 'text-gray-600 hover:text-emerald-600'
-                              }`}
+                              initial={{ opacity: 0, x: -10 }}
+                              animate={{ 
+                                opacity: 1, 
+                                x: 0,
+                                transition: { 
+                                  delay: index * 0.1,
+                                  duration: 0.3
+                                }
+                              }}
+                              exit={{ 
+                                opacity: 0, 
+                                x: -10,
+                                transition: { 
+                                  duration: 0.2
+                                }
+                              }}
                             >
-                              {item.name}
-                            </Link>
+                              <Link
+                                href={item.href}
+                                onClick={closeMenu}
+                                className={`block text-base transition-colors duration-200 py-1 ${
+                                  pathname === item.href 
+                                    ? 'text-emerald-600' 
+                                    : 'text-gray-600 hover:text-emerald-600'
+                                }`}
+                              >
+                                {item.name}
+                              </Link>
+                            </motion.div>
                           ))}
                         </motion.div>
                       )}
