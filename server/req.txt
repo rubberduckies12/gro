@@ -1,0 +1,96 @@
+Core Fundamental Analysis
+Financial Health Metrics:
+
+P/E, PEG, P/B, P/S ratios
+Debt-to-equity, current ratio, quick ratio
+ROE, ROA, ROIC
+Free cash flow, operating cash flow margins
+Revenue growth (1Y, 3Y, 5Y)
+Earnings growth and consistency
+Dividend yield and payout ratio
+
+Quality Indicators:
+
+Piotroski F-Score (financial strength)
+Altman Z-Score (bankruptcy risk)
+Interest coverage ratio
+Asset turnover ratios
+
+Technical Analysis Layers
+Price Action:
+
+Moving averages (20, 50, 200 day)
+Support/resistance levels
+Trend analysis and momentum
+Relative strength vs sector/market
+
+Technical Indicators:
+
+RSI, MACD, Bollinger Bands
+Volume analysis (OBV, accumulation/distribution)
+Volatility measures (ATR, implied volatility)
+
+Risk Assessment
+Market Risk:
+
+Beta (systematic risk)
+Alpha generation capability
+Maximum drawdown analysis
+Value at Risk (VaR) calculations
+Correlation with market factors
+
+Specific Risk:
+
+Sector concentration risk
+Geographic exposure
+Currency risk (for international stocks)
+Liquidity risk (average daily volume)
+
+ML Enhancement Opportunities
+Predictive Models:
+
+Earnings surprise prediction
+Price momentum forecasting
+Volatility prediction for options pricing
+Sector rotation timing
+Market regime detection (bull/bear/sideways)
+
+Alternative Data Integration:
+
+News sentiment analysis
+Social media sentiment
+Analyst revision trends
+Insider trading patterns
+Supply chain disruption indicators
+
+Sector & Macro Context
+Relative Analysis:
+
+Peer comparison metrics
+Sector performance vs market
+Industry-specific KPIs (banks: NIM, tech: R&D spend, etc.)
+
+Macro Factors:
+
+Interest rate sensitivity
+Economic cycle positioning
+Inflation hedge characteristics
+Currency impact analysis
+
+Portfolio Integration
+Position Sizing:
+
+Kelly Criterion application
+Risk parity considerations
+Correlation impact on existing holdings
+Sector/geography diversification impact
+
+Timing Factors:
+
+Earnings calendar awareness
+Ex-dividend dates
+Seasonal patterns
+Economic data release sensitivity
+
+Which components do you want to prioritize first? I'd suggest starting with fundamental scoring + basic technical indicators + ML-enhanced volatility prediction, then building out from there.
+Also, what's your target universe size? (S&P 500, broader market, international, etc.)

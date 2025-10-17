@@ -1,1 +1,0 @@
-// Checks if the user is logged in via JWT before letting them access secure routes.
