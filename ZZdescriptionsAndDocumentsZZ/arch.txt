@@ -1,0 +1,280 @@
+gro-backend/
+├── src/
+│   ├── stages/           # Core processing stages
+│   ├── shared/           # Shared utilities
+│   ├── database/         # Database layer
+│   ├── middleware/       # Express middleware
+│   └── server.js         # Main server file
+├── package.json
+└── README.md
+```
+
+---
+
+## **🎯 Stage 1: Goal Analysis & Requirements**
+```
+src/stages/01-goal-analysis/
+├── controllers/
+│   ├── goal-analyzer.js              # Main goal analysis controller
+│   ├── feasibility-checker.js        # Check if goals are realistic
+│   └── requirement-calculator.js     # Calculate return/risk requirements
+├── services/
+│   ├── monte-carlo-goal.js           # Goal-specific Monte Carlo
+│   ├── risk-tolerance-mapper.js      # Map user risk to portfolio limits
+│   └── timeline-analyzer.js          # Analyze goal timeline constraints
+├── models/
+│   ├── user-goal.js                  # Goal data model
+│   └── portfolio-requirements.js     # Required portfolio characteristics
+└── routes/
+    └── goal-analysis.js              # API routes for goal analysis
+```
+
+**Key Endpoints:**
+- `POST /api/goals/analyze`
+- `POST /api/goals/feasibility-check`
+- `GET /api/goals/requirements/:goalId`
+
+---
+
+## **🔍 Stage 2: Universe Screening**
+```
+src/stages/02-universe-screening/
+├── controllers/
+│   ├── screening-pipeline.js         # Main screening orchestrator
+│   ├── fundamental-screener.js       # Financial health screening
+│   ├── technical-screener.js         # Technical analysis screening
+│   └── risk-screener.js              # Risk-based filtering
+├── services/
+│   ├── stock-fetcher.js              # Get stock universe data
+│   ├── criteria-builder.js           # Build screening criteria from goals
+│   └── score-calculator.js           # Calculate screening scores
+├── screeners/
+│   ├── fundamental/
+│   │   ├── ratios-screener.js        # P/E, P/B, debt ratios
+│   │   ├── profitability-screener.js # ROE, ROA, margins
+│   │   ├── growth-screener.js        # Revenue/earnings growth
+│   │   ├── quality-screener.js       # Piotroski, Altman scores
+│   │   └── graham-screener.js        # Benjamin Graham criteria
+│   ├── technical/
+│   │   ├── trend-screener.js         # Moving averages, trend direction
+│   │   ├── momentum-screener.js      # RSI, MACD, oscillators
+│   │   ├── volume-screener.js        # Liquidity requirements
+│   │   └── volatility-screener.js    # Price stability metrics
+│   └── risk/
+│       ├── beta-screener.js          # Systematic risk filtering
+│       ├── drawdown-screener.js      # Maximum loss filtering
+│       └── liquidity-screener.js     # Trading volume requirements
+└── routes/
+    └── screening.js                  # API routes for screening
+```
+
+**Key Endpoints:**
+- `POST /api/screening/fundamental`
+- `POST /api/screening/technical`
+- `POST /api/screening/custom`
+- `GET /api/screening/pipeline/:goalId`
+
+---
+
+## **🤖 Stage 3: AI-Enhanced Deep Analysis**
+```
+src/stages/03-ai-analysis/
+├── controllers/
+│   ├── deep-analyzer.js              # Main analysis orchestrator
+│   ├── stock-analyzer.js             # Individual stock analysis
+│   └── batch-analyzer.js             # Bulk stock analysis
+├── analyzers/
+│   ├── fundamental/
+│   │   ├── ratios-analyzer.js        # Financial ratio analysis
+│   │   ├── cashflow-analyzer.js      # Cash flow analysis
+│   │   ├── profitability-analyzer.js # Profitability metrics
+│   │   ├── efficiency-analyzer.js    # Asset utilization
+│   │   ├── coverage-analyzer.js      # Debt coverage ratios
+│   │   └── graham-analyzer.js        # Graham intrinsic value
+│   ├── technical/
+│   │   ├── moving-averages.js        # SMA, EMA calculations
+│   │   ├── oscillators.js            # RSI, MACD, Stochastic
+│   │   ├── bollinger-bands.js        # Bollinger band analysis
+│   │   ├── support-resistance.js     # Key price levels
+│   │   ├── trend-analyzer.js         # Trend direction/strength
+│   │   └── volume-analyzer.js        # Volume pattern analysis
+│   ├── risk/
+│   │   ├── beta-calculator.js        # Beta vs market/sector
+│   │   ├── alpha-calculator.js       # Risk-adjusted returns
+│   │   ├── var-calculator.js         # Value at Risk
+│   │   ├── drawdown-analyzer.js      # Maximum drawdown analysis
+│   │   ├── tail-risk-analyzer.js     # Extreme risk events
+│   │   └── correlation-analyzer.js   # Asset correlations
+│   ├── sentiment/
+│   │   ├── news-analyzer.js          # News sentiment scoring
+│   │   ├── social-analyzer.js        # Social media sentiment
+│   │   ├── analyst-analyzer.js       # Analyst recommendations
+│   │   └── insider-analyzer.js       # Insider trading patterns
+│   └── ml/
+│       ├── earnings-predictor.js     # ML earnings forecasting
+│       ├── momentum-predictor.js     # Price momentum forecasting
+│       ├── volatility-predictor.js   # Volatility prediction
+│       ├── regime-detector.js        # Market regime classification
+│       └── sector-rotator.js         # Sector rotation timing
+├── services/
+│   ├── composite-scorer.js           # Combine all analysis scores
+│   ├── peer-comparator.js           # Industry peer comparison
+│   └── market-context.js             # Macro market analysis
+└── routes/
+    └── analysis.js                   # API routes for analysis
+```
+
+**Key Endpoints:**
+- `GET /api/stocks/:symbol/analysis`
+- `GET /api/ml/:symbol/predictions`
+- `GET /api/sentiment/:symbol/all`
+- `POST /api/analysis/batch`
+
+---
+
+## **⚖️ Stage 4: Portfolio Optimization**
+```
+src/stages/04-portfolio-optimization/
+├── controllers/
+│   ├── optimizer.js                  # Main optimization controller
+│   ├── allocation-builder.js         # Build optimal allocations
+│   └── constraint-manager.js         # Manage portfolio constraints
+├── optimizers/
+│   ├── mean-variance.js              # Mean-variance optimization
+│   ├── risk-parity.js                # Risk parity allocation
+│   ├── kelly-criterion.js            # Kelly optimal sizing
+│   ├── black-litterman.js            # Black-Litterman with ML views
+│   └── ensemble-optimizer.js         # Combine multiple methods
+├── services/
+│   ├── correlation-builder.js        # Build correlation matrices
+│   ├── diversification-checker.js    # Ensure proper diversification
+│   ├── sector-balancer.js            # Sector allocation limits
+│   ├── constraint-validator.js       # Validate optimization constraints
+│   └── weight-calculator.js          # Calculate final weights
+├── position-sizing/
+│   ├── kelly.js                      # Kelly Criterion sizing
+│   ├── risk-parity.js                # Risk-based position sizing
+│   └── correlation-impact.js         # Position correlation analysis
+└── routes/
+    └── optimization.js               # API routes for optimization
+```
+
+**Key Endpoints:**
+- `POST /api/portfolios/create`
+- `POST /api/portfolios/optimize`
+- `POST /api/position-sizing/kelly`
+- `POST /api/position-sizing/risk-parity`
+
+---
+
+## **🎲 Stage 5: Monte Carlo Validation**
+```
+src/stages/05-monte-carlo-validation/
+├── controllers/
+│   ├── validator.js                  # Main validation controller
+│   └── scenario-tester.js            # Test different scenarios
+├── monte-carlo/
+│   ├── stock.js                      # Individual stock simulation
+│   ├── portfolio.js                  # Portfolio simulation
+│   └── results.js                    # Process simulation results
+├── services/
+│   ├── goal-validator.js             # Validate against user goals
+│   ├── stress-tester.js              # Crisis scenario testing
+│   ├── outcome-analyzer.js           # Analyze simulation outcomes
+│   └── refinement-engine.js          # Suggest portfolio improvements
+├── scenarios/
+│   ├── market-scenarios.js           # Bull/bear/sideways markets
+│   ├── crisis-scenarios.js           # 2008, COVID, etc.
+│   └── inflation-scenarios.js        # High inflation periods
+└── routes/
+    └── validation.js                 # API routes for validation
+```
+
+**Key Endpoints:**
+- `POST /api/monte-carlo/portfolio`
+- `POST /api/monte-carlo/stock`
+- `GET /api/monte-carlo/:id/results`
+- `POST /api/validation/stress-test`
+
+---
+
+## **🔄 Stage 6: Continuous Monitoring**
+```
+src/stages/06-monitoring/
+├── controllers/
+│   ├── monitor.js                    # Main monitoring controller
+│   ├── health-checker.js             # Portfolio health monitoring
+│   └── rebalancer.js                 # Rebalancing logic
+├── monitors/
+│   ├── performance-monitor.js        # Track portfolio performance
+│   ├── risk-monitor.js               # Monitor risk metrics
+│   ├── goal-progress-monitor.js      # Track goal achievement
+│   ├── market-monitor.js             # Watch market conditions
+│   └── correlation-monitor.js        # Monitor asset correlations
+├── services/
+│   ├── alert-generator.js            # Generate user alerts
+│   ├── insight-generator.js          # AI-powered insights
+│   ├── rebalance-calculator.js       # Calculate rebalancing needs
+│   └── notification-sender.js        # Send notifications
+├── ai/
+│   ├── chat-handler.js               # Handle AI chat requests
+│   ├── insight-engine.js             # Generate portfolio insights
+│   └── explanation-generator.js      # Explain complex concepts
+└── routes/
+    └── monitoring.js                 # API routes for monitoring
+```
+
+**Key Endpoints:**
+- `GET /api/portfolios/:id/health`
+- `POST /api/portfolios/:id/rebalance`
+- `POST /api/chat/ask`
+- `GET /api/insights/:userId`
+
+---
+
+## **🔗 Shared Services & Utilities**
+```
+src/shared/
+├── services/
+│   ├── market-data.js                # Market data fetching
+│   ├── database.js                   # Database connection/queries
+│   ├── cache.js                      # Redis caching layer
+│   ├── queue.js                      # Background job processing
+│   └── external-apis.js              # Third-party API integration
+├── utils/
+│   ├── calculations.js               # Financial calculations
+│   ├── date-utils.js                 # Date/time utilities
+│   ├── validators.js                 # Input validation
+│   └── formatters.js                 # Data formatting
+├── models/
+│   ├── user.js                       # User data model
+│   ├── portfolio.js                  # Portfolio data model
+│   ├── stock.js                      # Stock data model
+│   └── trade.js                      # Trading data model
+└── middleware/
+    ├── auth.js                       # JWT authentication
+    ├── rate-limit.js                 # API rate limiting
+    ├── validation.js                 # Request validation
+    └── error-handler.js              # Error handling
+```
+
+---
+
+## **📊 Advanced Calculations (Cross-Stage)**
+```
+src/calculations/
+├── returns/
+│   ├── returns.js                    # Historical return analysis
+│   └── risk-adjusted-returns.js     # Risk-adjusted metrics
+├── options/
+│   ├── black-scholes.js              # Black-Scholes pricing
+│   ├── greeks.js                     # Option Greeks calculation
+│   └── implied-volatility.js         # IV calculation
+├── comparative/
+│   ├── peer-comparison.js            # Peer analysis
+│   ├── sector-analysis.js            # Sector performance
+│   └── macro-analysis.js             # Macro factor analysis
+└── calendar/
+    ├── earnings-calendar.js          # Earnings events
+    ├── dividend-calendar.js          # Dividend events
+    └── economic-calendar.js          # Economic events
